@@ -1,12 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
     <title>Adiklaas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2D3142',
+                        secondary: '#BFC0C0',
+                        light: '#FFFFFF',
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
 </head>
-<body>
-    
+
+<!-- Include the sidebar -->
+<div id="sidebar-container"></div>
+
+<!-- body of the main page -->
+<body class="bg-primary font-inter tracking-tighter text-light">
+    <main class="container mx-auto px-4 py-16 min-h-screen">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-5xl font-bold mb-8">Welcome to Adiklaas</h1>
+
+            <section class="space-y-12">
+                <div class="bg-secondary/10 p-8 rounded-lg">
+                    <h2 class="text-2xl font-semibold mb-4">Discover Innovation</h2>
+                    <p class="text-lg leading-relaxed">Experience the perfect blend of creativity and functionality with
+                        Adiklaas. We transform ideas into reality.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-secondary/10 p-8 rounded-lg">
+                        <h2 class="text-2xl font-semibold mb-4">Our Vision</h2>
+                        <p class="text-lg leading-relaxed">Creating meaningful experiences through innovative solutions
+                            and cutting-edge technology.</p>
+                    </div>
+                    <div class="bg-secondary/10 p-8 rounded-lg">
+                        <h2 class="text-2xl font-semibold mb-4">Our Mission</h2>
+                        <p class="text-lg leading-relaxed">Empowering businesses with robust digital solutions that
+                            drive growth and success.</p>
+                    </div>
+                </div>
+
+                <div class="bg-secondary/10 p-8 rounded-lg">
+                    <h2 class="text-2xl font-semibold mb-4">Why Choose Us</h2>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div>
+                            <h3 class="text-xl font-medium mb-2">Expertise</h3>
+                            <p class="text-lg">Industry-leading solutions</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-medium mb-2">Innovation</h3>
+                            <p class="text-lg">Cutting-edge technology</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-medium mb-2">Results</h3>
+                            <p class="text-lg">Proven track record</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- script plugin -->
+    <script>
+        $(document).ready(function () {
+            $("#sidebar-container").load("/components/sidebar.html", function () {
+                $("#openSidebar").click(function () {
+                    $("#sidebar").removeClass("-translate-x-full");
+                    $(this).addClass("opacity-0");
+                });
+
+                $("#closeSidebar").click(function () {
+                    $("#sidebar").addClass("-translate-x-full");
+                    $("#openSidebar").removeClass("opacity-0");
+                });
+            });
+        });
+    </script>
 </body>
+
 </html>
