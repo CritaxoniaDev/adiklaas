@@ -14,8 +14,8 @@
                 extend: {
                     colors: {
                         primary: '#2D3142',
-                        secondary: '#BFC0C0',
-                        light: '#FFFFFF',
+                        secondary: '#B57D7D',
+                        accent: '#F0F9F1',
                     },
                     fontFamily: {
                         inter: ['Inter', 'sans-serif'],
@@ -26,60 +26,91 @@
     </script>
 </head>
 
-<!-- Include the sidebar -->
-<div id="sidebar-container"></div>
+<div class="flex justify-between items-center">
+    <div id="sidebar-container"></div>
+    <img src="/images/adiklaas.png" alt="Adiklaas Logo" class="w-32 h-auto fixed top-6 right-6 z-10">
+</div>
 
-<!-- body of the main page -->
-<body class="bg-primary font-inter tracking-tighter text-light">
-    <main class="container mx-auto px-4 py-16 min-h-screen">
-        <div class="max-w-4xl mx-auto">
-            <h1 class="text-5xl font-bold mb-8">Welcome to Adiklaas</h1>
+<body class="bg-white font-inter tracking-tighter text-primary">
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center bg-gradient-to-b from-accent/30 to-white">
+        <div class="text-center px-4">
+            <h1 class="text-7xl font-bold mb-6 tracking-tight">
+                Welcome ka Dito sa
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">Lithan
+                    Adiklaas</span>
+            </h1>
+            <p class="text-xl text-primary/70 max-w-2xl mx-auto">Transform your digital journey with innovative
+                solutions that drive success and growth.</p>
+            <div class="mt-10">
+                <a href="#discover"
+                    class="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-full hover:bg-primary/90 transition-all">
+                    Explore More
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
 
-            <section class="space-y-12">
-                <div class="bg-secondary/10 p-8 rounded-lg">
-                    <h2 class="text-2xl font-semibold mb-4">Discover Innovation</h2>
+    <!-- Discover Section -->
+    <section id="discover" class="py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-accent p-8 rounded-xl shadow-sm">
+                    <h2 class="text-3xl font-semibold mb-4">Discover Innovation</h2>
                     <p class="text-lg leading-relaxed">Experience the perfect blend of creativity and functionality with
                         Adiklaas. We transform ideas into reality.</p>
                 </div>
 
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div class="bg-secondary/10 p-8 rounded-lg">
+                <div class="grid md:grid-cols-2 gap-8 mt-12">
+                    <div class="bg-accent p-8 rounded-xl shadow-sm">
                         <h2 class="text-2xl font-semibold mb-4">Our Vision</h2>
                         <p class="text-lg leading-relaxed">Creating meaningful experiences through innovative solutions
                             and cutting-edge technology.</p>
                     </div>
-                    <div class="bg-secondary/10 p-8 rounded-lg">
+                    <div class="bg-accent p-8 rounded-xl shadow-sm">
                         <h2 class="text-2xl font-semibold mb-4">Our Mission</h2>
                         <p class="text-lg leading-relaxed">Empowering businesses with robust digital solutions that
                             drive growth and success.</p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="bg-secondary/10 p-8 rounded-lg">
-                    <h2 class="text-2xl font-semibold mb-4">Why Choose Us</h2>
-                    <div class="grid md:grid-cols-3 gap-6">
-                        <div>
-                            <h3 class="text-xl font-medium mb-2">Expertise</h3>
-                            <p class="text-lg">Industry-leading solutions</p>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-medium mb-2">Innovation</h3>
-                            <p class="text-lg">Cutting-edge technology</p>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-medium mb-2">Results</h3>
-                            <p class="text-lg">Proven track record</p>
-                        </div>
+    <!-- Why Choose Us Section -->
+    <section class="py-24 bg-accent/20">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold mb-4">Why Choose Us</h2>
+                    <p class="text-lg text-primary/70">Experience excellence in every digital solution</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-xl shadow-sm">
+                        <h3 class="text-xl font-semibold mb-3">Expertise</h3>
+                        <p class="text-lg text-primary/70">Industry-leading solutions</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-sm">
+                        <h3 class="text-xl font-semibold mb-3">Innovation</h3>
+                        <p class="text-lg text-primary/70">Cutting-edge technology</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-sm">
+                        <h3 class="text-xl font-semibold mb-3">Results</h3>
+                        <p class="text-lg text-primary/70">Proven track record</p>
                     </div>
                 </div>
-            </section>
+            </div>
         </div>
+    </section>
+    </div>
     </main>
 
-    <!-- script plugin -->
     <script>
         $(document).ready(function () {
-            $("#sidebar-container").load("/components/sidebar.html", function () {
+            $("#sidebar-container").load("components/sidebar.html", function () {
                 $("#openSidebar").click(function () {
                     $("#sidebar").removeClass("-translate-x-full");
                     $(this).addClass("opacity-0");

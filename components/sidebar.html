@@ -1,37 +1,48 @@
-<div id="sidebar" class="fixed top-0 left-0 h-screen w-64 bg-primary border-r border-secondary/20 transform -translate-x-full transition-transform duration-300 ease-in-out">
-    <div class="p-6">
-        <div class="flex items-center justify-between mb-8">
-            <h2 class="text-2xl font-bold text-light">Adiklaas</h2>
-            <button id="closeSidebar" class="text-light hover:text-secondary">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<div id="sidebar" class="fixed top-0 left-0 h-screen w-72 bg-white/95 shadow-xl transform -translate-x-full transition-transform duration-300 ease-in-out backdrop-blur-lg">
+    <div class="p-8">
+        <div class="flex items-center justify-between mb-10">
+            <h2 class="text-3xl font-bold text-[#2D3142] tracking-tight">Adiklaas</h2>
+            <button id="closeSidebar" class="text-[#2D3142] hover:text-[#B57D7D] transition-colors duration-300">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                 </svg>
             </button>
         </div>
         
-        <nav class="space-y-4">
-            <a href="#" class="block text-light hover:text-secondary py-2 px-4 rounded transition-colors">Home</a>
-            <a href="#" class="block text-light hover:text-secondary py-2 px-4 rounded transition-colors">Services</a>
-            <a href="#" class="block text-light hover:text-secondary py-2 px-4 rounded transition-colors">Projects</a>
-            <a href="#" class="block text-light hover:text-secondary py-2 px-4 rounded transition-colors">About</a>
-            <a href="#" class="block text-light hover:text-secondary py-2 px-4 rounded transition-colors">Contact</a>
+        <nav class="space-y-2">
+            <a href="#" class="group flex items-center text-[#2D3142] hover:bg-[#F0F9F1] py-3 px-6 rounded-xl transition-all duration-300">
+                <span class="text-lg font-medium group-hover:translate-x-2 transition-transform duration-300">Home</span>
+            </a>
+            <a href="#" class="group flex items-center text-[#2D3142] hover:bg-[#F0F9F1] py-3 px-6 rounded-xl transition-all duration-300">
+                <span class="text-lg font-medium group-hover:translate-x-2 transition-transform duration-300">Gallery</span>
+            </a>
+            <a href="#" class="group flex items-center text-[#2D3142] hover:bg-[#F0F9F1] py-3 px-6 rounded-xl transition-all duration-300">
+                <span class="text-lg font-medium group-hover:translate-x-2 transition-transform duration-300">Videos</span>
+            </a>
         </nav>
+
+        <div class="absolute bottom-8 left-8 right-8">
+            <div class="p-4 bg-[#F0F9F1] rounded-xl">
+                <p class="text-sm text-[#2D3142] font-medium">Need help?</p>
+                <p class="text-xs text-[#2D3142]/70 mt-1">Contact our support team</p>
+            </div>
+        </div>
     </div>
 </div>
 
-<button id="openSidebar" class="fixed top-6 left-6 z-10 text-light hover:text-secondary transition-opacity duration-300">
-    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<button id="openSidebar" class="fixed top-6 left-6 z-10 text-[#2D3142] hover:text-[#B57D7D] transition-opacity duration-300">
+    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
     </svg>
 </button>
 
 <script>
-    $("#openSidebar").click(function() {
+    $("#openSidebar").click(function () {
         $("#sidebar").removeClass("-translate-x-full");
         $(this).addClass("opacity-0");
     });
 
-    $("#closeSidebar").click(function() {
+    $("#closeSidebar").click(function () {
         $("#sidebar").addClass("-translate-x-full");
         $("#openSidebar").removeClass("opacity-0");
     });
