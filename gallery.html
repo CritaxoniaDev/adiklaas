@@ -27,7 +27,27 @@
 </head>
 
 <body>
+    <div class="flex justify-between items-center">
+        <div id="sidebar-container"></div>
+        <img src="/images/adiklaas.png" alt="Adiklaas Logo" class="w-32 h-auto fixed top-6 right-6 z-10">
+    </div>
 
+
+    <script>
+        $(document).ready(function () {
+            $("#sidebar-container").load("components/sidebar.html", function () {
+                $("#openSidebar").click(function () {
+                    $("#sidebar").removeClass("-translate-x-full");
+                    $(this).addClass("opacity-0");
+                });
+
+                $("#closeSidebar").click(function () {
+                    $("#sidebar").addClass("-translate-x-full");
+                    $("#openSidebar").removeClass("opacity-0");
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
