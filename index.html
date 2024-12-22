@@ -10,7 +10,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Mystery+Quest&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Shadow&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
@@ -23,42 +23,97 @@
                     },
                     fontFamily: {
                         inter: ['Inter', 'sans-serif'],
-                        mystery: ['Mystery Quest', 'serif'],
+                        mystery: ['Londrina Shadow', 'serif'],
                     },
                 }
             }
         }
     </script>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
-    <!------------------- Sidebar ------------------->
+<!------------------- Sidebar ------------------->
 <div class="flex justify-between items-center">
     <div id="sidebar-container"></div>
     <img src="/images/adiklaas.png" alt="Adiklaas Logo" class="w-32 h-auto fixed top-6 right-6 z-10">
 </div>
 
 <body class="bg-white font-inter tracking-tighter text-primary">
+
+    <ul class="lightrope">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    
     <!-- Hero Section -->
-    <section style="margin-top: -40px;" class="min-h-screen flex items-center justify-center bg-gradient-to-b from-accent/30 to-white overflow-hidden">
+    <section style="margin-top: -20px;"
+        class="min-h-screen flex items-center justify-center bg-gradient-to-b from-accent/30 to-white overflow-hidden">
         <div class="max-w-[1230px] mx-auto text-center px-4">
             <div class="relative w-96 mx-auto overflow-hidden">
                 <div class="absolute inset-0 bg-gradient-to-b from-transparent via-white/50 to-white"></div>
                 <img src="/images/group-pic.png" alt="Group Picture" class="w-full h-full object-cover">
             </div>
 
-            <h1 class="text-7xl font-bold mb-6 tracking-tighter">
-                <div class="mb-2 text-3d">Welcome ka Dito sa</div>
-                <div id="animated-text" 
+            <h1 class="text-7xl font-bold mb-6 tracking-tight">
+                <div class="mb-2 text-3d font-mystery bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">Welcome ka Dito sa</div>
+                <div id="animated-text"
                     class="tracking-tight font-mystery bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
                     Lithan Adiklaas
                 </div>
             </h1>
 
-            <p class="text-2xl italic font-light text-primary/70 max-w-2xl mx-auto px-8 py-4">
-                United we Stand, divided we fall
-                <span class="block mt-4 text-lg font-medium text-primary/60">- the ancient Greek storyteller Aesop
-                    2024</span>
+            <p
+                class="text-2xl font-light text-primary/70 max-w-2xl mx-auto px-8 py-4 relative group">
+                <span class="absolute -left-4 top-0 text-4xl text-secondary/20 font-mystery">"</span>
+                United we Fall, divided we stand
+                <span class="absolute -right-4 bottom-0 text-4xl text-secondary/20 font-mystery">"</span>
+
+                <span
+                    class="block mt-6 text-lg font-medium text-primary/60 transform hover:text-secondary transition-colors duration-300">
+                    <span class="inline-block mr-2">—</span>
+                    the ancient one Charlemengay
+                    <span class="block mt-1 text-sm font-light tracking-wider">2024</span>
+                </span>
             </p>
 
             <div class="mt-10">
