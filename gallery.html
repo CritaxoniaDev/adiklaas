@@ -8,6 +8,11 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .custom-padding {
+            padding: 100px;
+        }
+    </style>
     <script>
         tailwind.config = {
             theme: {
@@ -35,7 +40,57 @@
         <img src="/images/adiklaas.png" alt="Adiklaas Logo" class="w-32 h-auto fixed top-6 right-6 z-10">
     </div>
 
+    <!------------ Photo's Section ------------------->
 
+    <div class="custom-padding">
+        <div class="flex items-center justify-center py-4 md:py-8 flex-wrap">
+            <button type="button" class="filter-button text-blue-700 hover:text-white border border-blue-600 bg-white hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:bg-gray-900 dark:focus:ring-blue-800" data-filter="all">All categories</button>
+            <button type="button" class="filter-button text-gray-900 border border-white hover:border-gray-200 dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700 bg-white focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-gray-800" data-filter="Memes">Memes</button>
+            <button type="button" class="filter-button text-gray-900 border border-white hover:border-gray-200 dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700 bg-white focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-gray-800" data-filter="1stCohort">1st Cohort</button>
+            <button type="button" class="filter-button text-gray-900 border border-white hover:border-gray-200 dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700 bg-white focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-gray-800" data-filter="2ndCohort">2nd Cohort</button>
+            <button type="button" class="filter-button text-gray-900 border border-white hover:border-gray-200 dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700 bg-white focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-gray-800" data-filter="Groupfie">Groupfie</button>
+        
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div class="relative filter-item Memes">
+                <img class="h-auto max-w-full rounded-lg" src="/images/gallerypics/500.jpg" alt="">
+                <a href="/images/gallerypics/500.jpg" download class="absolute top-2 right-2 bg-white text-blue-500 p-2 rounded-full shadow-lg hover:bg-blue-500 hover:text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                    </svg>
+                </a>
+            </div>
+            <div class="relative filter-item 1stCohort">
+                <img class="h-auto max-w-full rounded-lg" src="/images/gallerypics/old.jpg" alt="">
+                <a href="/images/gallerypics/old.jpg" download class="absolute top-2 right-2 bg-white text-blue-500 p-2 rounded-full shadow-lg hover:bg-blue-500 hover:text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                    </svg>
+                </a>
+            </div>
+            <div class="relative filter-item 2ndCohort">
+                <img class="h-auto max-w-full rounded-lg" src="/images/gallerypics/" alt="">
+                <a href="/images/gallerypics/" download class="absolute top-2 right-2 bg-white text-blue-500 p-2 rounded-full shadow-lg hover:bg-blue-500 hover:text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                    </svg>
+                </a>
+            </div>
+            <div class="relative filter-item Groupfie">
+                <img class="h-auto max-w-full rounded-lg" src="/images/gallerypics/" alt="">
+                <a href="/images/gallerypics/" download class="absolute top-2 right-2 bg-white text-blue-500 p-2 rounded-full shadow-lg hover:bg-blue-500 hover:text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                    </svg>
+                </a>
+            </div>       
+            
+        </div>
+    </div>
+
+    <!----------------- Footer ------------------->
+    <div id="footer-container"></div>
+    <!--------------------- Script --------------------------->
     <script>
         $(document).ready(function () {
             $("#sidebar-container").load("components/sidebar.html", function () {
@@ -49,8 +104,20 @@
                     $("#openSidebar").removeClass("opacity-0");
                 });
             });
+
+            // New footer load
+            $("#footer-container").load("components/footer.html");
+
+            $(".filter-button").click(function () {
+                var filter = $(this).data("filter");
+                if (filter == "all") {
+                    $(".filter-item").show();
+                } else {
+                    $(".filter-item").hide();
+                    $("." + filter).show();
+                }
+            });
         });
     </script>
-</body>
-
+    </body>
 </html>
