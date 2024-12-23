@@ -39,6 +39,7 @@
 </div>
 
 <!------------------- Body ------------------->
+
 <body class="bg-white font-inter tracking-tighter text-primary">
 
     <!------------------- Lights (Temporary) ------------------->
@@ -85,8 +86,8 @@
         <li></li>
         <li></li>
         <li></li>
-      </ul>
-    
+    </ul>
+
     <!-- Hero Section -->
     <section style="margin-top: -20px;"
         class="min-h-screen flex items-center justify-center bg-gradient-to-b from-accent/30 to-white overflow-hidden">
@@ -97,15 +98,16 @@
             </div>
 
             <h1 class="text-7xl font-bold mb-6 tracking-tight">
-                <div class="mb-2 text-3d font-mystery bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">Welcome ka Dito sa</div>
+                <div
+                    class="mb-2 text-3d font-mystery bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
+                    Welcome ka Dito sa</div>
                 <div id="animated-text"
                     class="tracking-tight font-mystery bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
                     Lithan Adiklaas
                 </div>
             </h1>
 
-            <p
-                class="text-2xl font-light text-primary/70 max-w-2xl mx-auto px-8 py-4 relative group">
+            <p class="text-2xl font-light text-primary/70 max-w-2xl mx-auto px-8 py-4 relative group">
                 <span class="absolute -left-4 top-0 text-4xl text-secondary/20 font-mystery">"</span>
                 United we Fall, divided we stand
                 <span class="absolute -right-4 bottom-0 text-4xl text-secondary/20 font-mystery">"</span>
@@ -197,6 +199,8 @@
         </div>
     </section>
 
+    <div id="footer-container"></div>
+
     <script>
         $(document).ready(function () {
             $("#sidebar-container").load("components/sidebar.html", function () {
@@ -210,6 +214,9 @@
                     $("#openSidebar").removeClass("opacity-0");
                 });
             });
+
+            // New footer load
+            $("#footer-container").load("components/footer.html");
         });
     </script>
     <script>
