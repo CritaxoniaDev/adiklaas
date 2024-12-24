@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adiklaas Blog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2D3142',
+                        secondary: '#B57D7D',
+                        accent: '#F0F9F1',
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-white font-inter tracking-tighter text-primary">
+    <!------------------- Sidebar ------------------->
+    <div class="flex justify-between items-center">
+        <div id="sidebar-container"></div>
+        <img src="/images/adiklaas.png" alt="Adiklaas Logo" class="w-32 h-auto fixed top-6 right-6 z-10">
+    </div>
+
+    <!-- Hero Section -->
+    <div class="bg-gradient-to-b from-accent/30 to-white py-20">
+        <div class="container mx-auto px-4">
+            <h1 class="text-6xl font-bold text-primary text-center mb-6">Latest Updates</h1>
+            <p class="text-xl text-primary/70 text-center max-w-2xl mx-auto">Stay informed with the latest news, updates, and insights from the Adiklaas team.</p>
+            <div id="date-toast" class="text-center mt-4 text-primary/60"></div>
+        </div>
+    </div>
+
+    <!-- Blog Grid -->
+    <div class="container mx-auto px-16 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Featured Post -->
+            <div class="col-span-1 md:col-span-2 lg:col-span-3">
+                <article class="bg-white rounded-2xl shadow-lg overflow-hidden transform hover:scale-[1.02] transition-transform">
+                    <img src="/images/group-pic.png" alt="Featured Post" class="w-full h-96 object-cover">
+                    <div class="p-8">
+                        <span class="text-secondary font-semibold">Featured</span>
+                        <h2 class="text-3xl font-bold mt-2 mb-4">The Future of Adiklaas: Our Vision for 2024</h2>
+                        <p class="text-primary/70 mb-6">Discover our ambitious plans and exciting developments coming to Adiklaas this year.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-primary/60">January 15, 2024</span>
+                            <a href="#" class="text-primary font-semibold hover:text-secondary">Read More →</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Regular Posts -->
+            <article class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-[1.02] transition-transform">
+                <img src="/images/adiklaas.png" alt="Blog Post" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-3">New Features Released</h3>
+                    <p class="text-primary/70 mb-4">Check out the latest features added to enhance your experience.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm text-primary/60">January 10, 2024</span>
+                        <a href="#" class="text-primary font-semibold hover:text-secondary">Read More →</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-[1.02] transition-transform">
+                <img src="/images/greenpakingscreen.gif" alt="Blog Post" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-3">Community Spotlight</h3>
+                    <p class="text-primary/70 mb-4">Highlighting amazing projects from our community members.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm text-primary/60">January 5, 2024</span>
+                        <a href="#" class="text-primary font-semibold hover:text-secondary">Read More →</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-[1.02] transition-transform">
+                <img src="/images/adiklaas.png" alt="Blog Post" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-3">Tech Tips & Tricks</h3>
+                    <p class="text-primary/70 mb-4">Learn how to maximize your productivity with these tips.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm text-primary/60">January 1, 2024</span>
+                        <a href="#" class="text-primary font-semibold hover:text-secondary">Read More →</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <div id="footer-container"></div>
+
+    <script>
+        $(document).ready(function() {
+            $("#sidebar-container").load("components/sidebar.html");
+            $("#footer-container").load("components/footer.html");
+
+            // Date Toast
+            const options = { 
+                weekday: 'long', 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+            };
+            const currentDate = new Date().toLocaleDateString('en-US', options);
+            
+            toastr.options = {
+                "positionClass": "toast-top-right",
+                "timeOut": "5000",
+                "closeButton": true,
+                "progressBar": true
+            };
+            
+            toastr.success(`Today is ${currentDate}`, 'Welcome to Our Blog!');
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#sidebar-container").load("components/sidebar.html", function () {
+                $("#openSidebar").click(function () {
+                    $("#sidebar").removeClass("-translate-x-full");
+                    $(this).addClass("opacity-0");
+                });
+
+                $("#closeSidebar").click(function () {
+                    $("#sidebar").addClass("-translate-x-full");
+                    $("#openSidebar").removeClass("opacity-0");
+                });
+            });
+
+            // New footer load
+            $("#footer-container").load("components/footer.html", function () {
+                // Update copyright year after footer loads
+                const yearElement = document.querySelector('#copyright-year');
+                yearElement.textContent = new Date().getFullYear();
+            });
+        });
+    </script>
+</body>
+</html>
