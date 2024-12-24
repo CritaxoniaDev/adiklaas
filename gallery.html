@@ -12,6 +12,37 @@
         .custom-padding {
             padding: 100px;
         }
+        .fixed-size {
+            width: 250px; /* Set the width to 250px */
+            height: 250px; /* Set the height to 250px */
+            object-fit: cover; /* Ensure the image covers the area */
+        }
+        .hover-message {
+            display: none;
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .relative:hover .hover-message {
+            display: block;
+        }
+        .download-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(255, 255, 255, 0.7);
+            color: blue;
+            padding: 5px;
+            border-radius: 50%;
+            display: none;
+        }
+        .relative:hover .download-button {
+            display: block;
+        }
     </style>
     <script>
         tailwind.config = {
@@ -61,7 +92,116 @@
                 data-filter="Groupfie">Groupfie</button>
 
         </div>
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="relative filter-item Memes">
+                <img class="fixed-size rounded-lg" src="/images/gallerypics/500.jpg" alt="">
+                <div class="hover-message">Pa 500 ni Des</div>
+                <a href="/images/gallerypics/500.jpg" download class="download-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                    </svg>
+                </a>
+            </div>
+            <div class="relative filter-item 1stCohort">
+                <img class="fixed-size rounded-lg" src="/images/gallerypics/gian.jpg" alt="">
+                <div class="hover-message">igop baii</div>
+                <a href="/images/gallerypics/gian.jpg" download class="download-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                    </svg>
+                </a>
+            </div>
+            <div class="relative filter-item 2ndCohort">
+                <img class="fixed-size rounded-lg" src="/images/gallerypics/" alt="">
+                <div class="hover-message">2nd Cohort picture</div>
+                <a href="/images/gallerypics/" download class="download-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                    </svg>
+                </a>
+            </div>
+            <div class="relative filter-item Ganaps">
+                <img class="fixed-size rounded-lg" src="/images/gallerypics/timbog.jpg" alt="">
+                <div class="hover-message">Naarestong suspek sa buybust operation</div>
+                <a href="/images/gallerypics/timbog.jpg" download class="download-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                    </svg>
+                </a>
+            </div>
+            <!-- Add more images here -->
+            <div class="relative filter-item Memes">
+                <img class="fixed-size rounded-lg" src="/images/gallerypics/500.jpg" alt="">
+                <div class="hover-message">This is a meme</div>
+                <a href="/images/gallerypics/500.jpg" download class="download-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                    </svg>
+                </a>
+            </div>
+            <div class="relative filter-item 1stCohort">
+                <img class="fixed-size rounded-lg" src="/images/gallerypics/old.jpg" alt="">
+                <div class="hover-message">1st Cohort picture</div>
+                <a href="/images/gallerypics/old.jpg" download class="download-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                    </svg>
+                </a>
+            </div>
+            <div class="relative filter-item 2ndCohort">
+                <img class="fixed-size rounded-lg" src="/images/gallerypics/" alt="">
+                <div class="hover-message">2nd Cohort picture</div>
+                <a href="/images/gallerypics/" download class="download-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                    </svg>
+                </a>
+            </div>
+            <div class="relative filter-item Ganaps">
+                <img class="fixed-size rounded-lg" src="/images/gallerypics/permit.jpg" alt="">
+                <div class="hover-message">Nanguha ng permit sa cashier</div>
+                <a href="/images/gallerypics/permit.jpg" download class="download-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                    </svg>
+                </a>
+            </div>
+            <div class="relative filter-item Memes">
+                <img class="fixed-size rounded-lg" src="/images/gallerypics/500.jpg" alt="">
+                <div class="hover-message">This is a meme</div>
+                <a href="/images/gallerypics/500.jpg" download class="download-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                    </svg>
+                </a>
+            </div>
+            <div class="relative filter-item 1stCohort">
+                <img class="fixed-size rounded-lg" src="/images/gallerypics/old.jpg" alt="">
+                <div class="hover-message">1st Cohort picture</div>
+                <a href="/images/gallerypics/old.jpg" download class="download-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                    </svg>
+                </a>
+            </div>
+            <div class="relative filter-item 2ndCohort">
+                <img class="fixed-size rounded-lg" src="/images/gallerypics/" alt="">
+                <div class="hover-message">2nd Cohort picture</div>
+                <a href="/images/gallerypics/" download class="download-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                    </svg>
+                </a>
+            </div>
+            <div class="relative filter-item Ganaps">
+                <img class="fixed-size rounded-lg" src="/images/gallerypics/timbog.jpg" alt="">
+                <div class="hover-message">Naarestong suspek sa buybust operation</div>
+                <a href="/images/gallerypics/timbog.jpg" download class="download-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                    </svg>
+                </a>
+            </div>
             <div class="relative filter-item Memes">
                 <img class="h-auto max-w-full rounded-lg" src="/images/gallerypics/500.jpg" alt="">
                 <a href="/images/gallerypics/500.jpg" download
