@@ -7,43 +7,8 @@
     <title>Adiklaas</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="css/gallery.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        .custom-padding {
-            padding: 100px;
-        }
-        .fixed-size {
-            width: 250px; /* Set the width to 250px */
-            height: 250px; /* Set the height to 250px */
-            object-fit: cover; /* Ensure the image covers the area */
-        }
-        .hover-message {
-            display: none;
-            position: absolute;
-            bottom: 10px;
-            left: 10px;
-            background-color: rgba(0, 0, 0, 0.7);
-            color: white;
-            padding: 5px 10px;
-            border-radius: 5px;
-        }
-        .relative:hover .hover-message {
-            display: block;
-        }
-        .download-button {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background-color: rgba(255, 255, 255, 0.7);
-            color: blue;
-            padding: 5px;
-            border-radius: 50%;
-            display: none;
-        }
-        .relative:hover .download-button {
-            display: block;
-        }
-    </style>
     <script>
         tailwind.config = {
             theme: {
@@ -273,9 +238,7 @@
                 const yearElement = document.querySelector('#copyright-year');
                 yearElement.textContent = new Date().getFullYear();
             });
-
-            Cop
-
+            
             $(".filter-button").click(function () {
                 var filter = $(this).data("filter");
                 if (filter == "all") {
