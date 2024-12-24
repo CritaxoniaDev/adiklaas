@@ -8,6 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="css/gallery.css">
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Shadow&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
@@ -20,6 +21,7 @@
                     },
                     fontFamily: {
                         inter: ['Inter', 'sans-serif'],
+                        mystery: ['Londrina Shadow', 'serif']
                     },
                 }
             }
@@ -35,612 +37,751 @@
         <div id="sidebar-container"></div>
         <img src="/images/adiklaas.png" alt="Adiklaas Logo" class="w-32 h-auto fixed top-6 right-6 z-10">
     </div>
-
-    <!--------------------- Title --------------------->
-    
-    <!------------ Photo's Section ------------------->
-
-    <div class="custom-padding">
-        <div class="flex items-center justify-center py-4 md:py-8 flex-wrap">
-            <button type="button"
-                class="filter-button text-blue-700 hover:text-white border border-blue-600 bg-white hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:bg-gray-900 dark:focus:ring-blue-800"
-                data-filter="all">All categories</button>
-            <button type="button"
-                class="filter-button text-gray-900 border border-white hover:border-gray-200 dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700 bg-white focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-gray-800"
-                data-filter="Memes">Memes</button>
-            <button type="button"
-                class="filter-button text-gray-900 border border-white hover:border-gray-200 dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700 bg-white focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-gray-800"
-                data-filter="1stCohort">1st Cohort</button>
-            <button type="button"
-                class="filter-button text-gray-900 border border-white hover:border-gray-200 dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700 bg-white focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-gray-800"
-                data-filter="2ndCohort">2nd Cohort</button>
-            <button type="button"
-                class="filter-button text-gray-900 border border-white hover:border-gray-200 dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700 bg-white focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-gray-800"
-                data-filter="Random">Random</button>
-
-        </div>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div class="relative filter-item Memes">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/500.jpg" alt="">
-                <div class="hover-message">Pa 500 ni Des</div>
-                <a href="/images/gallerypics/500.jpg" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
-            </div>
-            <div class="relative filter-item 1stCohort">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/gian.jpg" alt="">
-                <div class="hover-message">igop baii</div>
-                <a href="/images/gallerypics/gian.jpg" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
-            </div>
-            <div class="relative filter-item 2ndCohort">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/menardo.jpg" alt="">
-                <div class="hover-message">Menardo De Carpio</div>
-                <a href="/images/gallerypics/menardo.jpg" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
-            </div>
-            <div class="relative filter-item Ganaps">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/timbog.jpg" alt="">
-                <div class="hover-message">Naarestong suspek sa buybust operation</div>
-                <a href="/images/gallerypics/timbog.jpg" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
-            </div>
-            <!-- Add more images here -->
-            <div class="relative filter-item Memes">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/stress2.jpg" alt="">
-                <div class="hover-message">Me nung sunod-sunod deadline</div>
-                <a href="/images/gallerypics/stress2.jpg" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
-            </div>
-            <div class="relative filter-item 1stCohort">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/dtigods.jpg" alt="">
-                <div class="hover-message">Mga DTI Gods ng Adiklaas</div>
-                <a href="/images/gallerypics/dtigods.jpg" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
-            </div>
-            <div class="relative filter-item Random">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/g1.jpg" alt="">
-                <div class="hover-message">Para sa Valed</div>
-                <a href="/images/gallerypics/g1.jpg" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
-            </div>
-            <div class="relative filter-item Ganaps">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/permit.jpg" alt="">
-                <div class="hover-message">Nanguha ng permit sa cashier</div>
-                <a href="/images/gallerypics/permit.jpg" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
-            </div>
-            <div class="relative filter-item Memes">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/inis.jpg" alt="">
-                <div class="hover-message">Inis before disaster</div>
-                <a href="/images/gallerypics/inis.jpg" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
-            </div>
-            <div class="relative filter-item 1stCohort">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/asdf.jpg" alt="">
-                <div class="hover-message">panahong ignorante sa zoom at teams</div>
-                <a href="/images/gallerypics/asdf.jpg" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
-            </div>
-            <div class="relative filter-item 1stCohort">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/facecard.jpg" alt="">
-                <div class="hover-message">facecard ng Adiklaas</div>
-                <a href="/images/gallerypics/facecard.jpg" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
-            </div>
-            <div class="relative filter-item 1stCohort">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/ds.jpg" alt="">
-                <div class="hover-message">Improvised death scene</div>
-                <a href="/images/gallerypics/ds.jpg" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
-            </div>
-            <div class="relative filter-item Memes">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/faceoff.png" alt="">
-                <div class="hover-message">beauty & the beast</div>
-                <a href="/images/gallerypics/faceoff.png" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
-            </div>
-            <div class="relative filter-item Memes">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/idgaf.jpg" alt="">
-                <div class="hover-message">Me when idgaf</div>
-                <a href="/images/gallerypics/idgaf.jpg" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
-            </div>
-            <div class="relative filter-item 1stCohort">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/bluescreen.jpg" alt="">
-                <div class="hover-message">Bluescreen Gods</div>
-                <a href="/images/gallerypics/" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
-            </div>
-            <div class="relative filter-item Memes">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/lumiwanag.jpg" alt="">
-                <div class="hover-message">Magpaliwanag ka</div>
-                <a href="/images/gallerypics/lumiwanag.jpg" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
-            </div>
-            <div class="relative filter-item Memes">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/holdap to.jpg" alt="">
-                <div class="hover-message">Walang kikilos ng masama</div>
-                <a href="/images/gallerypics/holdap to.jpg" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
-            </div>
-            <div class="relative filter-item Memes">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/fdsa.jpg" alt="">
-                <div class="hover-message">Wen da asesor is finding samting mising in my code</div>
-                <a href="/images/gallerypics/fdsa.jpg" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
-            </div>
-            <div class="relative filter-item Memes">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/kyut.jpg" alt="">
-                <div class="hover-message">cravings ko lang ssob</div>
-                <a href="/images/gallerypics/kyut.jpg" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
-            </div>
-            <div class="relative filter-item Ganaps">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/tulog.jpg" alt="">
-                <div class="hover-message">Rip sa perang binayad sa RAITI</div>
-                <a href="/images/gallerypics/tulog.jpg" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
-            </div>
-            <div class="relative filter-item Memes">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/judger.jpg" alt="">
-                <div class="hover-message">Nagscroll ka lang, najudge ka pa</div>
-                <a href="/images/gallerypics/judger.jpg" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
-            </div>
-            <div class="relative filter-item Memes">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/intrusive.jpg" alt="">
-                <div class="hover-message">May bida bida sa section nio</div>
-                <a href="/images/gallerypics/intrusive.jpg" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
-            </div>
-            <div class="relative filter-item 2ndCohort">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/drei.jpg" alt="">
-                <div class="hover-message">Andreia</div>
-                <a href="/images/gallerypics/drei.jpg" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
-            </div>
-            <div class="relative filter-item 1stCohort">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/art.jpg" alt="">
-                <div class="hover-message">Work smart, not hard.</div>
-                <a href="/images/gallerypics/art.jpg" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
-            </div>
-            <div class="relative filter-item Memes">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/ti.jpg" alt="">
-                <div class="hover-message">Wen i spil da ti and da ingridient pas bai</div>
-                <a href="/images/gallerypics/ti.jpg" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
-            </div>
-            <div class="relative filter-item Memes">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/g.jpg" alt="">
-                <div class="hover-message">pagod kana sa hamon ng buhay</div>
-                <a href="/images/gallerypics/g.jpg" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
-            </div>
-            <div class="relative filter-item Random">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/lipat.jpg" alt="">
-                <div class="hover-message">Lumikas sa 400</div>
-                <a href="/images/gallerypics/lipat.jpg" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
-            </div>
-            <div class="relative filter-item Memes">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/men2.jpg" alt="">
-                <div class="hover-message">Me pag ayaw mag reply ng mga mentor</div>
-                <a href="/images/gallerypics/men2.jpg" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
-            </div>
-            <div class="relative filter-item Memes">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/shish.jpg" alt="">
-                <div class="hover-message">Chillin' like a villain kahit 10 pa yung pending na gawain</div>
-                <a href="/images/gallerypics/shish.jpg" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
-            </div>
-            <div class="relative filter-item 2ndCohort">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/jams.jpg" alt="">
-                <div class="hover-message">Jamills</div>
-                <a href="/images/gallerypics/jams.jpg" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
-            </div>
-            <div class="relative filter-item Memes">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/tawa.jpg" alt="">
-                <div class="hover-message">Pov ang galang nung tropa mo</div>
-                <a href="/images/gallerypics/tawa.jpg" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
-            </div>
-            <div class="relative filter-item Random">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/miks.jpg" alt="">
-                <div class="hover-message">nahalukay sa baul</div>
-                <a href="/images/gallerypics/miks.jpg" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
-            </div>
-            <div class="relative filter-item Memes">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/dadi.jpg" alt="">
-                <div class="hover-message">Daddy's home</div>
-                <a href="/images/gallerypics/dadi.jpg" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
-            </div>
-            <div class="relative filter-item Memes">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/bara.jpg" alt="">
-                <div class="hover-message">Easiest way para mapikon si des</div>
-                <a href="/images/gallerypics/bara.jpg" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
-            </div>
-            <div class="relative filter-item 2ndCohort">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/jho.jpg" alt="">
-                <div class="hover-message">Jho</div>
-                <a href="/images/gallerypics/jho.jpg" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
-            </div>
-            <div class="relative filter-item Random">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/watermark.jpg" alt="">
-                <div class="hover-message">Maglagay ng watermark para di macopyright</div>
-                <a href="/images/gallerypics/watermark.jpg" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
-            </div>
-            <div class="relative filter-item Memes">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/des.jpg" alt="">
-                <div class="hover-message">Pov kasing height mo yung Stuff toy</div>
-                <a href="/images/gallerypics/des.jpg" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
-            </div>
-            <div class="relative filter-item Memes">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/endorser.jpg" alt="">
-                <div class="hover-message">Pov endorser ka pero dika bayad</div>
-                <a href="/images/gallerypics/endorser.jpg" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
-            </div>
-            <div class="relative filter-item Random">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/scam.jpg" alt="">
-                <div class="hover-message">Pinag endorse ka ng Educlaas</div>
-                <a href="/images/gallerypics/scam.jpg" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
-            </div>
-            <div class="relative filter-item 1stCohort">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/des2.jpg" alt="">
-                <div class="hover-message">Anak mong nakapunta na sa playground</div>
-                <a href="/images/gallerypics/des2.jpg" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
-            </div>
-            <div class="relative filter-item 2ndCohort">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/qw.jpg" alt="">
-                <div class="hover-message">sdfa</div>
-                <a href="/images/gallerypics/qw.jpg" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
-            </div>
-            <div class="relative filter-item 1stCohort">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/gian2.jpg" alt="">
-                <div class="hover-message">Expiration</div>
-                <a href="/images/gallerypics/gian2.jpg" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
-            </div>
-            <div class="relative filter-item Memes">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/gulat.jpg" alt="">
-                <div class="hover-message">After sakuna</div>
-                <a href="/images/gallerypics/gulat.jpg" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
-            </div>
-            <div class="relative filter-item Memes">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/gigil2.jpg" alt="">
-                <div class="hover-message">Sinabing tama na, umulit pa</div>
-                <a href="/images/gallerypics/gigil2.jpg" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
-            </div>
-            <div class="relative filter-item 1stCohort">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/racist.jpg" alt="">
-                <div class="hover-message">Nigatron</div>
-                <a href="/images/gallerypics/racist.jpg" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
-            </div>
-            <div class="relative filter-item Memes">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/lutang.jpg" alt="">
-                <div class="hover-message">Me habang iniisip bat gumana code ko</div>
-                <a href="/images/gallerypics/lutang.jpg" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
-            </div>
-            <div class="relative filter-item Memes">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/des4.png" alt="">
-                <div class="hover-message">Me nung binabaan yung brightness ng laptop</div>
-                <a href="/images/gallerypics/des4.png" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
-            </div>
-            <div class="relative filter-item Memes">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/2joints.png" alt="">
-                <div class="hover-message">Geng Geng</div>
-                <a href="/images/gallerypics/2joints.png" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
-            </div>
-            <div class="relative filter-item Memes">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/inis3.jpg" alt="">
-                <div class="hover-message">Me pag di kami nag kakaintindihan nung mentor</div>
-                <a href="/images/gallerypics/inis3.jpg" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
-            </div>
-            <div class="relative filter-item 1stCohort">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/bading2.jpg" alt="">
-                <div class="hover-message">Bading</div>
-                <a href="/images/gallerypics/bading2.jpg" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
-            </div>
-            <div class="relative filter-item 1stCohort">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/muse.jpg" alt="">
-                <div class="hover-message">Muse ng Adiklaas</div>
-                <a href="/images/gallerypics/muse.jpg" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
-            </div>
-            <div class="relative filter-item 2ndCohort">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/jam1.jpg" alt="">
-                <div class="hover-message">Coding on the Bus~</div>
-                <a href="/images/gallerypics/jam1.jpg" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
-            </div>
-            <div class="relative filter-item Memes">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/bading4.jpg" alt="">
-                <div class="hover-message">Chian</div>
-                <a href="/images/gallerypics/bading4.jpg" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
-            </div>
-            <div class="relative filter-item Memes">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/disgust.jpg" alt="">
-                <div class="hover-message">Nakakatuwa yon?!</div>
-                <a href="/images/gallerypics/disgust.jpg" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
-            </div>
-            <div class="relative filter-item Memes">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/chiswis.jpg" alt="">
-                <div class="hover-message">Chian pt.2</div>
-                <a href="/images/gallerypics/chiswis.jpg" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
-            </div>
-            <div class="relative filter-item 1stCohort">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/fku2.jpg" alt="">
-                <div class="hover-message">Me sa mga regular na nakipag friends para sa source code</div>
-                <a href="/images/gallerypics/fku2.jpg" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
-            </div>
-            <div class="relative filter-item Memes">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/disgust2.jpg" alt="">
-                <div class="hover-message">Sinabihan ni maam na dipa daw nagpapasa kahit 2 weeks ago ko na napasa</div>
-                <a href="/images/gallerypics/disgust2.jpg" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
-            </div>
-            <div class="relative filter-item Memes">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/kay.png" alt="">
-                <div class="hover-message">Me nung nalaman kong hindi pindot pindot lang ang IT</div>
-                <a href="/images/gallerypics/kay.png" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
-            </div><div class="relative filter-item 2ndCohort">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/jam6.jpg" alt="">
-                <div class="hover-message">Coding on the bus pt.2~</div>
-                <a href="/images/gallerypics/jam6.jpg" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
-            </div>
-            <div class="relative filter-item 1stCohort">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/priso.jpg" alt="">
-                <div class="hover-message">Mapriso ka</div>
-                <a href="/images/gallerypics/priso.jpg" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
-            </div>
-            <div class="relative filter-item 1stCohort">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/kwin1.jpg" alt="">
-                <div class="hover-message">Baka si kwin yan</div>
-                <a href="/images/gallerypics/kwin1.jpg" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
-            </div>
-            <div class="relative filter-item 1stCohort">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/nads.jpg" alt="">
-                <div class="hover-message">Ate Nads</div>
-                <a href="/images/gallerypics/nads.jpg" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
-            </div>
-            <div class="relative filter-item 1stCohort">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/kalbo.png" alt="">
-                <div class="hover-message">Eri Kalbs</div>
-                <a href="/images/gallerypics/kalbo.png" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
-            </div>
-            <div class="relative filter-item Memes">
-                <img class="fixed-size rounded-lg" src="/images/gallerypics/cha4.jpg" alt="">
-                <div class="hover-message">dfgsd</div>
-                <a href="/images/gallerypics/cha4.jpg" download class="download-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                </a>
+    <!-- Add this at the start of the body, before any content -->
+    <div id="auth-overlay" class="fixed inset-0 bg-primary bg-opacity-95 flex items-center justify-center z-50">
+        <div class="bg-white p-8 rounded-lg shadow-xl max-w-md w-full mx-4">
+            <img src="/images/adiklaas.png" alt="Adiklaas Logo" class="w-32 mx-auto mb-6">
+            <h2 class="text-2xl font-bold text-primary mb-4 text-center">Welcome to Adiklaas Gallery</h2>
+            <div class="space-y-4">
+                <input type="password" id="gallery-password"
+                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    placeholder="Enter access code">
+                <button onclick="checkPassword()"
+                    class="w-full bg-primary text-white py-2 rounded-lg hover:bg-opacity-90 transition-all">
+                    Access Gallery
+                </button>
             </div>
         </div>
     </div>
 
-    <!----------------- Footer ------------------->
-    <div id="footer-container"></div>
+    <!--------------------- Title --------------------->
+
+    <!------------ Photo's Section ------------------->
+    <div class="gallery-content">
+        <div class="custom-padding">
+            <h1
+                class="text-6xl font-mystery text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
+                Our Gallery
+            </h1>
+            <div class="flex items-center justify-center py-4 md:py-8 flex-wrap">
+                <button type="button"
+                    class="filter-button text-blue-700 hover:text-white border border-blue-600 bg-white hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:bg-gray-900 dark:focus:ring-blue-800"
+                    data-filter="all">All categories</button>
+                <button type="button"
+                    class="filter-button text-gray-900 border border-white hover:border-gray-200 dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700 bg-white focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-gray-800"
+                    data-filter="Memes">Memes</button>
+                <button type="button"
+                    class="filter-button text-gray-900 border border-white hover:border-gray-200 dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700 bg-white focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-gray-800"
+                    data-filter="1stCohort">1st Cohort</button>
+                <button type="button"
+                    class="filter-button text-gray-900 border border-white hover:border-gray-200 dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700 bg-white focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-gray-800"
+                    data-filter="2ndCohort">2nd Cohort</button>
+                <button type="button"
+                    class="filter-button text-gray-900 border border-white hover:border-gray-200 dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700 bg-white focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-gray-800"
+                    data-filter="Random">Random</button>
+
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="relative filter-item Memes">
+                    <img class="fixed-size rounded-lg" src="/images/gallerypics/500.jpg" alt="">
+                    <div class="hover-message">Pa 500 ni Des</div>
+                    <a href="/images/gallerypics/500.jpg" download class="download-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative filter-item 1stCohort">
+                    <img class="fixed-size rounded-lg" src="/images/gallerypics/gian.jpg" alt="">
+                    <div class="hover-message">igop baii</div>
+                    <a href="/images/gallerypics/gian.jpg" download class="download-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative filter-item 2ndCohort">
+                    <img class="fixed-size rounded-lg" src="/images/gallerypics/menardo.jpg" alt="">
+                    <div class="hover-message">Menardo De Carpio</div>
+                    <a href="/images/gallerypics/menardo.jpg" download class="download-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative filter-item Ganaps">
+                    <img class="fixed-size rounded-lg" src="/images/gallerypics/timbog.jpg" alt="">
+                    <div class="hover-message">Naarestong suspek sa buybust operation</div>
+                    <a href="/images/gallerypics/timbog.jpg" download class="download-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                        </svg>
+                    </a>
+                </div>
+                <!-- Add more images here -->
+                <div class="relative filter-item Memes">
+                    <img class="fixed-size rounded-lg" src="/images/gallerypics/stress2.jpg" alt="">
+                    <div class="hover-message">Me nung sunod-sunod deadline</div>
+                    <a href="/images/gallerypics/stress2.jpg" download class="download-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative filter-item 1stCohort">
+                    <img class="fixed-size rounded-lg" src="/images/gallerypics/dtigods.jpg" alt="">
+                    <div class="hover-message">Mga DTI Gods ng Adiklaas</div>
+                    <a href="/images/gallerypics/dtigods.jpg" download class="download-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative filter-item Random">
+                    <img class="fixed-size rounded-lg" src="/images/gallerypics/g1.jpg" alt="">
+                    <div class="hover-message">Para sa Valed</div>
+                    <a href="/images/gallerypics/g1.jpg" download class="download-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative filter-item Ganaps">
+                    <img class="fixed-size rounded-lg" src="/images/gallerypics/permit.jpg" alt="">
+                    <div class="hover-message">Nanguha ng permit sa cashier</div>
+                    <a href="/images/gallerypics/permit.jpg" download class="download-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative filter-item Memes">
+                    <img class="fixed-size rounded-lg" src="/images/gallerypics/inis.jpg" alt="">
+                    <div class="hover-message">Inis before disaster</div>
+                    <a href="/images/gallerypics/inis.jpg" download class="download-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative filter-item 1stCohort">
+                    <img class="fixed-size rounded-lg" src="/images/gallerypics/asdf.jpg" alt="">
+                    <div class="hover-message">panahong ignorante sa zoom at teams</div>
+                    <a href="/images/gallerypics/asdf.jpg" download class="download-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative filter-item 1stCohort">
+                    <img class="fixed-size rounded-lg" src="/images/gallerypics/facecard.jpg" alt="">
+                    <div class="hover-message">facecard ng Adiklaas</div>
+                    <a href="/images/gallerypics/facecard.jpg" download class="download-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative filter-item 1stCohort">
+                    <img class="fixed-size rounded-lg" src="/images/gallerypics/ds.jpg" alt="">
+                    <div class="hover-message">Improvised death scene</div>
+                    <a href="/images/gallerypics/ds.jpg" download class="download-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative filter-item Memes">
+                    <img class="fixed-size rounded-lg" src="/images/gallerypics/faceoff.png" alt="">
+                    <div class="hover-message">beauty & the beast</div>
+                    <a href="/images/gallerypics/faceoff.png" download class="download-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative filter-item Memes">
+                    <img class="fixed-size rounded-lg" src="/images/gallerypics/idgaf.jpg" alt="">
+                    <div class="hover-message">Me when idgaf</div>
+                    <a href="/images/gallerypics/idgaf.jpg" download class="download-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative filter-item 1stCohort">
+                    <img class="fixed-size rounded-lg" src="/images/gallerypics/bluescreen.jpg" alt="">
+                    <div class="hover-message">Bluescreen Gods</div>
+                    <a href="/images/gallerypics/" download class="download-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative filter-item Memes">
+                    <img class="fixed-size rounded-lg" src="/images/gallerypics/lumiwanag.jpg" alt="">
+                    <div class="hover-message">Magpaliwanag ka</div>
+                    <a href="/images/gallerypics/lumiwanag.jpg" download class="download-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative filter-item Memes">
+                    <img class="fixed-size rounded-lg" src="/images/gallerypics/holdap to.jpg" alt="">
+                    <div class="hover-message">Walang kikilos ng masama</div>
+                    <a href="/images/gallerypics/holdap to.jpg" download class="download-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative filter-item Memes">
+                    <img class="fixed-size rounded-lg" src="/images/gallerypics/fdsa.jpg" alt="">
+                    <div class="hover-message">Wen da asesor is finding samting mising in my code</div>
+                    <a href="/images/gallerypics/fdsa.jpg" download class="download-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative filter-item Memes">
+                    <img class="fixed-size rounded-lg" src="/images/gallerypics/kyut.jpg" alt="">
+                    <div class="hover-message">cravings ko lang ssob</div>
+                    <a href="/images/gallerypics/kyut.jpg" download class="download-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative filter-item Ganaps">
+                    <img class="fixed-size rounded-lg" src="/images/gallerypics/tulog.jpg" alt="">
+                    <div class="hover-message">Rip sa perang binayad sa RAITI</div>
+                    <a href="/images/gallerypics/tulog.jpg" download class="download-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative filter-item Memes">
+                    <img class="fixed-size rounded-lg" src="/images/gallerypics/judger.jpg" alt="">
+                    <div class="hover-message">Nagscroll ka lang, najudge ka pa</div>
+                    <a href="/images/gallerypics/judger.jpg" download class="download-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative filter-item Memes">
+                    <img class="fixed-size rounded-lg" src="/images/gallerypics/intrusive.jpg" alt="">
+                    <div class="hover-message">May bida bida sa section nio</div>
+                    <a href="/images/gallerypics/intrusive.jpg" download class="download-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative filter-item 2ndCohort">
+                    <img class="fixed-size rounded-lg" src="/images/gallerypics/drei.jpg" alt="">
+                    <div class="hover-message">Andreia</div>
+                    <a href="/images/gallerypics/drei.jpg" download class="download-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative filter-item 1stCohort">
+                    <img class="fixed-size rounded-lg" src="/images/gallerypics/art.jpg" alt="">
+                    <div class="hover-message">Work smart, not hard.</div>
+                    <a href="/images/gallerypics/art.jpg" download class="download-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative filter-item Memes">
+                    <img class="fixed-size rounded-lg" src="/images/gallerypics/ti.jpg" alt="">
+                    <div class="hover-message">Wen i spil da ti and da ingridient pas bai</div>
+                    <a href="/images/gallerypics/ti.jpg" download class="download-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative filter-item Memes">
+                    <img class="fixed-size rounded-lg" src="/images/gallerypics/g.jpg" alt="">
+                    <div class="hover-message">pagod kana sa hamon ng buhay</div>
+                    <a href="/images/gallerypics/g.jpg" download class="download-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative filter-item Random">
+                    <img class="fixed-size rounded-lg" src="/images/gallerypics/lipat.jpg" alt="">
+                    <div class="hover-message">Lumikas sa 400</div>
+                    <a href="/images/gallerypics/lipat.jpg" download class="download-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative filter-item Memes">
+                    <img class="fixed-size rounded-lg" src="/images/gallerypics/men2.jpg" alt="">
+                    <div class="hover-message">Me pag ayaw mag reply ng mga mentor</div>
+                    <a href="/images/gallerypics/men2.jpg" download class="download-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative filter-item Memes">
+                    <img class="fixed-size rounded-lg" src="/images/gallerypics/shish.jpg" alt="">
+                    <div class="hover-message">Chillin' like a villain kahit 10 pa yung pending na gawain</div>
+                    <a href="/images/gallerypics/shish.jpg" download class="download-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative filter-item 2ndCohort">
+                    <img class="fixed-size rounded-lg" src="/images/gallerypics/jams.jpg" alt="">
+                    <div class="hover-message">Jamills</div>
+                    <a href="/images/gallerypics/jams.jpg" download class="download-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative filter-item Memes">
+                    <img class="fixed-size rounded-lg" src="/images/gallerypics/tawa.jpg" alt="">
+                    <div class="hover-message">Pov ang galang nung tropa mo</div>
+                    <a href="/images/gallerypics/tawa.jpg" download class="download-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative filter-item Random">
+                    <img class="fixed-size rounded-lg" src="/images/gallerypics/miks.jpg" alt="">
+                    <div class="hover-message">nahalukay sa baul</div>
+                    <a href="/images/gallerypics/miks.jpg" download class="download-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative filter-item Memes">
+                    <img class="fixed-size rounded-lg" src="/images/gallerypics/dadi.jpg" alt="">
+                    <div class="hover-message">Daddy's home</div>
+                    <a href="/images/gallerypics/dadi.jpg" download class="download-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative filter-item Memes">
+                    <img class="fixed-size rounded-lg" src="/images/gallerypics/bara.jpg" alt="">
+                    <div class="hover-message">Easiest way para mapikon si des</div>
+                    <a href="/images/gallerypics/bara.jpg" download class="download-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative filter-item 2ndCohort">
+                    <img class="fixed-size rounded-lg" src="/images/gallerypics/jho.jpg" alt="">
+                    <div class="hover-message">Jho</div>
+                    <a href="/images/gallerypics/jho.jpg" download class="download-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative filter-item Random">
+                    <img class="fixed-size rounded-lg" src="/images/gallerypics/watermark.jpg" alt="">
+                    <div class="hover-message">Maglagay ng watermark para di macopyright</div>
+                    <a href="/images/gallerypics/watermark.jpg" download class="download-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative filter-item Memes">
+                    <img class="fixed-size rounded-lg" src="/images/gallerypics/des.jpg" alt="">
+                    <div class="hover-message">Pov kasing height mo yung Stuff toy</div>
+                    <a href="/images/gallerypics/des.jpg" download class="download-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative filter-item Memes">
+                    <img class="fixed-size rounded-lg" src="/images/gallerypics/endorser.jpg" alt="">
+                    <div class="hover-message">Pov endorser ka pero dika bayad</div>
+                    <a href="/images/gallerypics/endorser.jpg" download class="download-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative filter-item Random">
+                    <img class="fixed-size rounded-lg" src="/images/gallerypics/scam.jpg" alt="">
+                    <div class="hover-message">Pinag endorse ka ng Educlaas</div>
+                    <a href="/images/gallerypics/scam.jpg" download class="download-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative filter-item 1stCohort">
+                    <img class="fixed-size rounded-lg" src="/images/gallerypics/des2.jpg" alt="">
+                    <div class="hover-message">Anak mong nakapunta na sa playground</div>
+                    <a href="/images/gallerypics/des2.jpg" download class="download-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative filter-item 2ndCohort">
+                    <img class="fixed-size rounded-lg" src="/images/gallerypics/qw.jpg" alt="">
+                    <div class="hover-message">sdfa</div>
+                    <a href="/images/gallerypics/qw.jpg" download class="download-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative filter-item 1stCohort">
+                    <img class="fixed-size rounded-lg" src="/images/gallerypics/gian2.jpg" alt="">
+                    <div class="hover-message">Expiration</div>
+                    <a href="/images/gallerypics/gian2.jpg" download class="download-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative filter-item Memes">
+                    <img class="fixed-size rounded-lg" src="/images/gallerypics/gulat.jpg" alt="">
+                    <div class="hover-message">After sakuna</div>
+                    <a href="/images/gallerypics/gulat.jpg" download class="download-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative filter-item Memes">
+                    <img class="fixed-size rounded-lg" src="/images/gallerypics/gigil2.jpg" alt="">
+                    <div class="hover-message">Sinabing tama na, umulit pa</div>
+                    <a href="/images/gallerypics/gigil2.jpg" download class="download-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative filter-item 1stCohort">
+                    <img class="fixed-size rounded-lg" src="/images/gallerypics/racist.jpg" alt="">
+                    <div class="hover-message">Nigatron</div>
+                    <a href="/images/gallerypics/racist.jpg" download class="download-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative filter-item Memes">
+                    <img class="fixed-size rounded-lg" src="/images/gallerypics/lutang.jpg" alt="">
+                    <div class="hover-message">Me habang iniisip bat gumana code ko</div>
+                    <a href="/images/gallerypics/lutang.jpg" download class="download-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative filter-item Memes">
+                    <img class="fixed-size rounded-lg" src="/images/gallerypics/des4.png" alt="">
+                    <div class="hover-message">Me nung binabaan yung brightness ng laptop</div>
+                    <a href="/images/gallerypics/des4.png" download class="download-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative filter-item Memes">
+                    <img class="fixed-size rounded-lg" src="/images/gallerypics/2joints.png" alt="">
+                    <div class="hover-message">Geng Geng</div>
+                    <a href="/images/gallerypics/2joints.png" download class="download-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative filter-item Memes">
+                    <img class="fixed-size rounded-lg" src="/images/gallerypics/inis3.jpg" alt="">
+                    <div class="hover-message">Me pag di kami nag kakaintindihan nung mentor</div>
+                    <a href="/images/gallerypics/inis3.jpg" download class="download-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative filter-item 1stCohort">
+                    <img class="fixed-size rounded-lg" src="/images/gallerypics/bading2.jpg" alt="">
+                    <div class="hover-message">Bading</div>
+                    <a href="/images/gallerypics/bading2.jpg" download class="download-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative filter-item 1stCohort">
+                    <img class="fixed-size rounded-lg" src="/images/gallerypics/muse.jpg" alt="">
+                    <div class="hover-message">Muse ng Adiklaas</div>
+                    <a href="/images/gallerypics/muse.jpg" download class="download-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative filter-item 2ndCohort">
+                    <img class="fixed-size rounded-lg" src="/images/gallerypics/jam1.jpg" alt="">
+                    <div class="hover-message">Coding on the Bus~</div>
+                    <a href="/images/gallerypics/jam1.jpg" download class="download-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative filter-item Memes">
+                    <img class="fixed-size rounded-lg" src="/images/gallerypics/bading4.jpg" alt="">
+                    <div class="hover-message">Chian</div>
+                    <a href="/images/gallerypics/bading4.jpg" download class="download-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative filter-item Memes">
+                    <img class="fixed-size rounded-lg" src="/images/gallerypics/disgust.jpg" alt="">
+                    <div class="hover-message">Nakakatuwa yon?!</div>
+                    <a href="/images/gallerypics/disgust.jpg" download class="download-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative filter-item Memes">
+                    <img class="fixed-size rounded-lg" src="/images/gallerypics/chiswis.jpg" alt="">
+                    <div class="hover-message">Chian pt.2</div>
+                    <a href="/images/gallerypics/chiswis.jpg" download class="download-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative filter-item 1stCohort">
+                    <img class="fixed-size rounded-lg" src="/images/gallerypics/fku2.jpg" alt="">
+                    <div class="hover-message">Me sa mga regular na nakipag friends para sa source code</div>
+                    <a href="/images/gallerypics/fku2.jpg" download class="download-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative filter-item Memes">
+                    <img class="fixed-size rounded-lg" src="/images/gallerypics/disgust2.jpg" alt="">
+                    <div class="hover-message">Sinabihan ni maam na dipa daw nagpapasa kahit 2 weeks ago ko na
+                        napasa</div>
+                    <a href="/images/gallerypics/disgust2.jpg" download class="download-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative filter-item Memes">
+                    <img class="fixed-size rounded-lg" src="/images/gallerypics/kay.png" alt="">
+                    <div class="hover-message">Me nung nalaman kong hindi pindot pindot lang ang IT</div>
+                    <a href="/images/gallerypics/kay.png" download class="download-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative filter-item 2ndCohort">
+                    <img class="fixed-size rounded-lg" src="/images/gallerypics/jam6.jpg" alt="">
+                    <div class="hover-message">Coding on the bus pt.2~</div>
+                    <a href="/images/gallerypics/jam6.jpg" download class="download-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative filter-item 1stCohort">
+                    <img class="fixed-size rounded-lg" src="/images/gallerypics/priso.jpg" alt="">
+                    <div class="hover-message">Mapriso ka</div>
+                    <a href="/images/gallerypics/priso.jpg" download class="download-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative filter-item 1stCohort">
+                    <img class="fixed-size rounded-lg" src="/images/gallerypics/kwin1.jpg" alt="">
+                    <div class="hover-message">Baka si kwin yan</div>
+                    <a href="/images/gallerypics/kwin1.jpg" download class="download-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative filter-item 1stCohort">
+                    <img class="fixed-size rounded-lg" src="/images/gallerypics/nads.jpg" alt="">
+                    <div class="hover-message">Ate Nads</div>
+                    <a href="/images/gallerypics/nads.jpg" download class="download-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative filter-item 1stCohort">
+                    <img class="fixed-size rounded-lg" src="/images/gallerypics/kalbo.png" alt="">
+                    <div class="hover-message">Eri Kalbs</div>
+                    <a href="/images/gallerypics/kalbo.png.jpg" download class="download-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!----------------- Footer ------------------->
+        <div id="footer-container"></div>
+    </div>
     <!--------------------- Script --------------------------->
     <script>
         $(document).ready(function () {
@@ -662,7 +803,7 @@
                 const yearElement = document.querySelector('#copyright-year');
                 yearElement.textContent = new Date().getFullYear();
             });
-            
+
             $(".filter-button").click(function () {
                 var filter = $(this).data("filter");
                 if (filter == "all") {
@@ -673,6 +814,70 @@
                 }
             });
         });
+    </script>
+
+    <script>
+        // Remove the sessionStorage check and always show the auth overlay
+        document.getElementById('auth-overlay').style.display = 'flex';
+
+        const validateKey = (input) => {
+            const target = "YWRpa2xhYXMyMDI0";
+            return btoa(input) === target;
+        }
+
+        function checkPassword() {
+            const input = document.getElementById('gallery-password').value;
+            if (validateKey(input)) {
+                document.getElementById('auth-overlay').style.display = 'none';
+                document.querySelector('.gallery-content').classList.add('authenticated');
+            } else {
+                const authBox = document.querySelector('#auth-overlay > div');
+                authBox.classList.add('shake');
+                setTimeout(() => authBox.classList.remove('shake'), 500);
+                document.getElementById('gallery-password').value = '';
+            }
+        }
+
+        // Add Enter key support
+        document.getElementById('gallery-password').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                checkPassword();
+            }
+        });
+    </script>
+
+    <script>
+        // Disable right-click
+        document.addEventListener('contextmenu', (e) => e.preventDefault());
+
+        // Disable keyboard shortcuts
+        document.addEventListener('keydown', (e) => {
+            if (
+                // Disable F12
+                e.key === 'F12' ||
+                // Disable Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+Shift+C
+                (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) ||
+                // Disable Ctrl+U (view source)
+                (e.ctrlKey && e.key === 'U')
+            ) {
+                e.preventDefault();
+            }
+        });
+
+        // Clear console on open
+        console.clear();
+        // Override console methods
+        ['log', 'debug', 'info', 'warn', 'error'].forEach(method => {
+            console[method] = () => { };
+        });
+
+        // Detect DevTools
+        let devtools = function () { };
+        devtools.toString = function () {
+            document.querySelector('.gallery-content').style.display = 'none';
+            return '';
+        }
+        console.log('%c', devtools);
     </script>
 </body>
 
