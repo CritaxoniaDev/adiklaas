@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,18 +26,18 @@
     </script>
 </head>
 
-    <!------------------- Sidebar ------------------->
-    
-    <div class="flex justify-between items-center">
-        <div id="sidebar-container"></div>
-        <img src="/images/adiklaas.png" alt="Adiklaas Logo" class="w-32 h-auto fixed top-6 right-6 z-10">
-    </div>
-    
+<!------------------- Sidebar ------------------->
+
+<div class="flex justify-between items-center">
+    <div id="sidebar-container"></div>
+    <img src="/images/adiklaas.png" alt="Adiklaas Logo" class="w-32 h-auto fixed top-6 right-6 z-10">
+</div>
+
 <body class="bg-white font-inter tracking-tighter text-primary">
 
 
 
-    
+
 
     <script>
         $(document).ready(function () {
@@ -51,7 +52,14 @@
                     $("#openSidebar").removeClass("opacity-0");
                 });
             });
+
+            $("#footer-container").load("components/footer.html", function () {
+                // Update copyright year after footer loads
+                const yearElement = document.querySelector('#copyright-year');
+                yearElement.textContent = new Date().getFullYear();
+            });
         });
     </script>
 </body>
+
 </html>

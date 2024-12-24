@@ -216,7 +216,11 @@
             });
 
             // New footer load
-            $("#footer-container").load("components/footer.html");
+            $("#footer-container").load("components/footer.html", function () {
+                // Update copyright year after footer loads
+                const yearElement = document.querySelector('#copyright-year');
+                yearElement.textContent = new Date().getFullYear();
+            });
         });
     </script>
     <script>
