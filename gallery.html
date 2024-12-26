@@ -39,16 +39,61 @@
     </div>
     <!-- Add this at the start of the body, before any content -->
     <div id="auth-overlay" class="fixed inset-0 bg-primary bg-opacity-95 flex items-center justify-center z-50">
-        <div class="bg-white p-8 rounded-lg shadow-xl max-w-md w-full mx-4">
-            <img src="/images/adiklaas.png" alt="Adiklaas Logo" class="w-32 mx-auto mb-6">
-            <h2 class="text-2xl font-bold text-primary mb-4 text-center">Welcome to Adiklaas Gallery</h2>
-            <div class="space-y-4">
-                <input type="password" id="gallery-password"
-                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    placeholder="Enter access code">
-                <button onclick="checkPassword()"
-                    class="w-full bg-primary text-white py-2 rounded-lg hover:bg-opacity-90 transition-all">
-                    Access Gallery
+        <!-- Comic dots pattern background -->
+        <div
+            class="absolute inset-0 bg-[radial-gradient(#B57D7D_1.5px,transparent_1.5px)] [background-size:20px_20px] opacity-20">
+        </div>
+
+        <div class="bg-white p-8 rounded-3xl max-w-md w-full mx-4 
+                    border-[6px] border-primary shadow-[12px_12px_0_0_#B57D7D]
+                    ">
+
+            <!-- Enhanced logo section -->
+            <div class="relative">
+                <img src="/images/adiklaas.png" alt="Adiklaas Logo"
+                    class="w-40 mx-auto mb-6 transform hover:scale-110 transition-transform duration-300">
+                <div class="absolute -top-4 -right-4 bg-yellow-400 text-primary font-black px-4 py-1 
+                            rounded-full rotate-12 border-3 border-primary 
+                            shadow-[4px_4px_0_0_#2D3142]">
+                    POW!
+                </div>
+            </div>
+
+            <!-- Enhanced title -->
+            <h2 class="text-3xl font-black text-primary mb-6 text-center
+                       [text-shadow:3px_3px_0_#B57D7D]">
+                SECRET GALLERY ACCESS!
+            </h2>
+
+            <div class="space-y-6">
+                <!-- Enhanced input field -->
+                <div class="relative">
+                    <input type="password" id="gallery-password" class="w-full px-6 py-4 bg-white border-3 border-primary rounded-xl
+                               text-lg font-bold text-primary placeholder-primary/50
+                               focus:outline-none focus:ring-4 focus:ring-yellow-400
+                               shadow-[4px_4px_0_0_#2D3142]" placeholder="ENTER THE SECRET CODE!">
+                    <div class="absolute -top-7 -left-3 bg-secondary text-white font-bold px-3 py-1 
+                                rounded-full rotate-12 text-sm border-2 border-primary">
+                        TOP SECRET!
+                    </div>
+                </div>
+
+                <!-- Add this inside the auth-overlay div, after the main content div -->
+                <div id="error-message" class="fixed top-10 left-1/2 transform -translate-x-1/2 -translate-y-full opacity-0 transition-all duration-500
+                    bg-yellow-400 px-8 py-4 rounded-xl border-4 border-primary shadow-[8px_8px_0_0_#2D3142]
+                    flex items-center gap-4">
+                    <span class="text-xl font-black text-primary">WRONG CODE, BAI! PAKIULIT! 💥</span>
+                </div>
+
+                <!-- Enhanced button -->
+                <button onclick="checkPassword()" class="w-full bg-primary text-white py-4 rounded-xl font-black text-xl
+                           border-3 border-primary shadow-[6px_6px_0_0_#B57D7D]
+                           hover:shadow-none hover:translate-x-1 hover:translate-y-1
+                           transition-all duration-300 relative overflow-hidden
+                           group">
+                    <span class="relative z-10">UNLOCK THE GALLERY!</span>
+                    <div class="absolute inset-0 bg-gradient-to-r from-secondary to-primary 
+                                opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </button>
             </div>
         </div>
@@ -59,30 +104,94 @@
     <!------------ Photo's Section ------------------->
     <div class="gallery-content">
         <div class="custom-padding">
-            <h1
-                class="text-6xl font-mystery text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
-                Our Gallery
-            </h1>
-            <div class="flex items-center justify-center py-4 md:py-8 flex-wrap">
-                <button type="button"
-                    class="filter-button text-blue-700 hover:text-white border border-blue-600 bg-white hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:bg-gray-900 dark:focus:ring-blue-800"
-                    data-filter="all">All categories</button>
-                <button type="button"
-                    class="filter-button text-gray-900 border border-white hover:border-gray-200 dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700 bg-white focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-gray-800"
-                    data-filter="Memes">Memes</button>
-                <button type="button"
-                    class="filter-button text-gray-900 border border-white hover:border-gray-200 dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700 bg-white focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-gray-800"
-                    data-filter="1stCohort">1st Cohort</button>
-                <button type="button"
-                    class="filter-button text-gray-900 border border-white hover:border-gray-200 dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700 bg-white focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-gray-800"
-                    data-filter="2ndCohort">2nd Cohort</button>
-                <button type="button"
-                    class="filter-button text-gray-900 border border-white hover:border-gray-200 dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700 bg-white focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-gray-800"
-                    data-filter="Random">Random</button>
+            <div class="relative py-12 text-center">
+                <!-- Comic burst background -->
+                <div
+                    class="absolute inset-0 bg-[radial-gradient(circle_at_center,#B57D7D_0%,transparent_60%)] opacity-20">
+                </div>
 
+                <h1
+                    class="text-7xl font-mystery relative inline-block transform hover:scale-105 transition-transform duration-500">
+                    <!-- Main title with enhanced styling -->
+                    <span class="relative block bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-primary
+                                 [text-shadow:4px_4px_0_#B57D7D] animate-pulse">
+                        Our Epic Gallery!
+                    </span>
+
+                    <!-- Decorative elements -->
+                    <span class="absolute -top-6 -left-6 text-yellow-400 text-4xl rotate-12">★</span>
+                    <span class="absolute -bottom-6 -right-6 text-yellow-400 text-4xl -rotate-12">★</span>
+
+                    <!-- Comic-style subtitle -->
+                    <span class="block text-2xl font-bold text-primary mt-4 tracking-wider">
+                        KAPOW! Check out our awesome collection!
+                    </span>
+                </h1>
+
+                <!-- Decorative zigzag border -->
+                <div class="w-48 h-2 bg-secondary mx-auto mt-6"
+                    style="clip-path: polygon(0% 0%, 10% 100%, 20% 0%, 30% 100%, 40% 0%, 50% 100%, 60% 0%, 70% 100%, 80% 0%, 90% 100%, 100% 0%)">
+                </div>
+            </div>
+
+            <div class="flex items-center justify-center py-8 flex-wrap gap-4">
+                <button type="button" class="filter-button bg-primary text-white px-6 py-3 rounded-xl 
+                           font-black text-lg border-4 border-primary
+                           shadow-[6px_6px_0_0_#B57D7D] hover:shadow-none
+                           hover:translate-x-1 hover:translate-y-1 
+                           transition-all duration-300 relative overflow-hidden
+                           group transform hover:rotate-2" data-filter="all">
+                    <span class="relative z-10">★ ALL PICS! ★</span>
+                    <div class="absolute inset-0 bg-gradient-to-r from-secondary to-primary 
+                                opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </button>
+
+                <button type="button" class="filter-button bg-yellow-400 text-primary px-6 py-3 rounded-xl 
+                           font-black text-lg border-4 border-primary
+                           shadow-[6px_6px_0_0_#2D3142] hover:shadow-none
+                           hover:translate-x-1 hover:translate-y-1
+                           transition-all duration-300 relative overflow-hidden
+                           group transform hover:-rotate-2" data-filter="Memes">
+                    <span class="relative z-10">⚡ MEMES! ⚡</span>
+                    <div class="absolute inset-0 bg-gradient-to-r from-yellow-300 to-yellow-400 
+                                opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </button>
+
+                <button type="button" class="filter-button bg-secondary text-white px-6 py-3 rounded-xl 
+                           font-black text-lg border-4 border-primary
+                           shadow-[6px_6px_0_0_#2D3142] hover:shadow-none
+                           hover:translate-x-1 hover:translate-y-1
+                           transition-all duration-300 relative overflow-hidden
+                           group transform hover:rotate-2" data-filter="1stCohort">
+                    <span class="relative z-10">💥 1ST COHORT! 💥</span>
+                    <div class="absolute inset-0 bg-gradient-to-r from-secondary/80 to-secondary 
+                                opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </button>
+
+                <button type="button" class="filter-button bg-primary text-white px-6 py-3 rounded-xl 
+                           font-black text-lg border-4 border-primary
+                           shadow-[6px_6px_0_0_#B57D7D] hover:shadow-none
+                           hover:translate-x-1 hover:translate-y-1
+                           transition-all duration-300 relative overflow-hidden
+                           group transform hover:-rotate-2" data-filter="2ndCohort">
+                    <span class="relative z-10">🌟 2ND COHORT! 🌟</span>
+                    <div class="absolute inset-0 bg-gradient-to-r from-primary/80 to-primary 
+                                opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </button>
+
+                <button type="button" class="filter-button bg-yellow-400 text-primary px-6 py-3 rounded-xl 
+                           font-black text-lg border-4 border-primary
+                           shadow-[6px_6px_0_0_#2D3142] hover:shadow-none
+                           hover:translate-x-1 hover:translate-y-1
+                           transition-all duration-300 relative overflow-hidden
+                           group transform hover:rotate-2" data-filter="Random">
+                    <span class="relative z-10">✨ RANDOM! ✨</span>
+                    <div class="absolute inset-0 bg-gradient-to-r from-yellow-300 to-yellow-400 
+                                opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </button>
             </div>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                
+
                 <div class="relative filter-item 1stCohort">
                     <img class="fixed-size rounded-lg" src="/images/gallerypics/gian.jpg" alt="">
                     <div class="hover-message">igop baii</div>
@@ -94,7 +203,7 @@
                         </svg>
                     </a>
                 </div>
-                
+
                 <div class="relative filter-item 2ndCohort">
                     <img class="fixed-size rounded-lg" src="/images/gallerypics/menardo.jpg" alt="">
                     <div class="hover-message">Menardo De Carpio</div>
@@ -801,7 +910,7 @@
                         </svg>
                     </a>
                 </div>
-                
+
                 <div class="relative filter-item 1stCohort">
                     <img class="fixed-size rounded-lg" src="/images/gallerypics/chara.jpg" alt="">
                     <div class="hover-message">Charle</div>
@@ -890,7 +999,7 @@
                         </svg>
                     </a>
                 </div>
-                
+
                 <div class="relative filter-item Memes">
                     <img class="fixed-size rounded-lg" src="/images/gallerypics/charli kalbs.png" alt="">
                     <div class="hover-message">Charle Kalbo</div>
@@ -1018,13 +1127,32 @@
 
         function checkPassword() {
             const input = document.getElementById('gallery-password').value;
+            const errorMsg = document.getElementById('error-message');
+
             if (validateKey(input)) {
                 document.getElementById('auth-overlay').style.display = 'none';
                 document.querySelector('.gallery-content').classList.add('authenticated');
             } else {
+                // Show error message with animation
+                errorMsg.style.transform = 'translate(-50%, 0)';
+                errorMsg.style.opacity = '1';
+
+                // Shake effect on the auth box
                 const authBox = document.querySelector('#auth-overlay > div');
                 authBox.classList.add('shake');
-                setTimeout(() => authBox.classList.remove('shake'), 500);
+
+                // Add comic-style rotation animation
+                errorMsg.style.transform = 'translate(-50%, 0) rotate(-3deg)';
+                setTimeout(() => errorMsg.style.transform = 'translate(-50%, 0) rotate(3deg)', 150);
+                setTimeout(() => errorMsg.style.transform = 'translate(-50%, 0) rotate(0deg)', 300);
+
+                // Reset after delay
+                setTimeout(() => {
+                    errorMsg.style.transform = 'translate(-50%, -100%)';
+                    errorMsg.style.opacity = '0';
+                    authBox.classList.remove('shake');
+                }, 2000);
+
                 document.getElementById('gallery-password').value = '';
             }
         }

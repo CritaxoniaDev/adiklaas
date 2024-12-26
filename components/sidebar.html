@@ -1,68 +1,69 @@
 <div id="sidebar"
-    class="fixed top-0 left-0 h-screen w-72 bg-white/95 shadow-xl transform -translate-x-full transition-transform duration-300 ease-in-out backdrop-blur-lg z-[9999]">
-    <div class="p-8">
+    class="fixed top-0 left-0 h-screen w-80 bg-white shadow-[8px_0_20px_-5px_rgba(45,49,66,0.3)] 
+    transform -translate-x-full transition-all duration-300 ease-in-out z-[9999]
+    border-r-[6px] border-primary">
+    
+    <!-- Comic dots pattern background -->
+    <div class="absolute inset-0 bg-[radial-gradient(#2D3142_1px,transparent_1px)] [background-size:16px_16px] opacity-10"></div>
+
+    <div class="p-8 relative">
+        <!-- Enhanced header -->
         <div class="flex items-center justify-between mb-10">
-            <h2 class="text-3xl font-bold text-[#2D3142] tracking-tight">Adiklaas</h2>
-            <button id="closeSidebar" class="text-[#2D3142] hover:text-[#B57D7D] transition-colors duration-300">
-                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            <h2 class="text-4xl font-black text-primary tracking-tight transform hover:scale-105 transition-transform
+                       [text-shadow:3px_3px_0_#B57D7D]">
+                ADIKLAAS!
+            </h2>
+            <button id="closeSidebar" 
+                    class="bg-primary text-white p-2 rounded-lg transform hover:rotate-180 
+                    transition-all duration-300 border-3 border-primary shadow-[4px_4px_0_0_#B57D7D]">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M6 18L18 6M6 6l12 12" />
                 </svg>
             </button>
         </div>
 
-        <nav class="space-y-2">
+        <!-- Enhanced navigation -->
+        <nav class="space-y-3">
             <a href="index.html"
-                class="group flex items-center text-[#2D3142] hover:bg-[#F0F9F1] py-3 px-6 rounded-xl transition-all duration-300">
-                <span
-                    class="text-lg font-medium group-hover:translate-x-2 transition-transform duration-300">Home</span>
+                class="group flex items-center bg-white hover:bg-yellow-400 py-4 px-6 rounded-xl transition-all duration-300
+                       border-3 border-primary shadow-[4px_4px_0_0_#2D3142] hover:shadow-none hover:translate-x-1 hover:translate-y-1">
+                <span class="text-xl font-bold text-primary group-hover:translate-x-2 transition-transform duration-300">
+                    ★ HOME!</span>
             </a>
             <a href="gallery.html"
-                class="group flex items-center text-[#2D3142] hover:bg-[#F0F9F1] py-3 px-6 rounded-xl transition-all duration-300">
-                <span
-                    class="text-lg font-medium group-hover:translate-x-2 transition-transform duration-300">Gallery</span>
+                class="group flex items-center bg-white hover:bg-yellow-400 py-4 px-6 rounded-xl transition-all duration-300
+                       border-3 border-primary shadow-[4px_4px_0_0_#2D3142] hover:shadow-none hover:translate-x-1 hover:translate-y-1">
+                <span class="text-xl font-bold text-primary group-hover:translate-x-2 transition-transform duration-300">
+                    ★ GALLERY!</span>
             </a>
             <a href="videos.html"
-                class="group flex items-center text-[#2D3142] hover:bg-[#F0F9F1] py-3 px-6 rounded-xl transition-all duration-300">
-                <span
-                    class="text-lg font-medium group-hover:translate-x-2 transition-transform duration-300">Videos</span>
+                class="group flex items-center bg-white hover:bg-yellow-400 py-4 px-6 rounded-xl transition-all duration-300
+                       border-3 border-primary shadow-[4px_4px_0_0_#2D3142] hover:shadow-none hover:translate-x-1 hover:translate-y-1">
+                <span class="text-xl font-bold text-primary group-hover:translate-x-2 transition-transform duration-300">
+                    ★ VIDEOS!</span>
             </a>
             <a href="members.html"
-                class="group flex items-center text-[#2D3142] hover:bg-[#F0F9F1] py-3 px-6 rounded-xl transition-all duration-300">
-                <span
-                    class="text-lg font-medium group-hover:translate-x-2 transition-transform duration-300">Members</span>
+                class="group flex items-center bg-white hover:bg-yellow-400 py-4 px-6 rounded-xl transition-all duration-300
+                       border-3 border-primary shadow-[4px_4px_0_0_#2D3142] hover:shadow-none hover:translate-x-1 hover:translate-y-1">
+                <span class="text-xl font-bold text-primary group-hover:translate-x-2 transition-transform duration-300">
+                    ★ MEMBERS!</span>
             </a>
             <a href="blog.html"
-                class="group flex items-center text-[#2D3142] hover:bg-[#F0F9F1] py-3 px-6 rounded-xl transition-all duration-300">
-                <span
-                    class="text-lg font-medium group-hover:translate-x-2 transition-transform duration-300">Blog</span>
+                class="group flex items-center bg-white hover:bg-yellow-400 py-4 px-6 rounded-xl transition-all duration-300
+                       border-3 border-primary shadow-[4px_4px_0_0_#2D3142] hover:shadow-none hover:translate-x-1 hover:translate-y-1">
+                <span class="text-xl font-bold text-primary group-hover:translate-x-2 transition-transform duration-300">
+                    ★ BLOG!</span>
             </a>
         </nav>
-
-        <div class="absolute bottom-8 left-8 right-8">
-            <div class="p-4 bg-[#F0F9F1] rounded-xl">
-                <p class="text-sm text-[#2D3142] font-medium">Need help?</p>
-                <p class="text-xs text-[#2D3142]/70 mt-1">Contact our support team</p>
-            </div>
-        </div>
     </div>
 </div>
 
-
+<!-- Enhanced open button -->
 <button id="openSidebar"
-    class="fixed top-6 left-6 z-[9999] text-[#2D3142] hover:text-[#B57D7D] transition-opacity duration-300">
-    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+    class="fixed top-6 left-6 z-[9999] bg-yellow-400 p-3 rounded-xl
+           transform hover:rotate-12 hover:scale-110 transition-all duration-300
+           border-3 border-primary shadow-[4px_4px_0_0_#2D3142]">
+    <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M4 6h16M4 12h16M4 18h16" />
     </svg>
 </button>
-
-<script>
-    $("#openSidebar").click(function () {
-        $("#sidebar").removeClass("-translate-x-full");
-        $(this).addClass("opacity-0");
-    });
-
-    $("#closeSidebar").click(function () {
-        $("#sidebar").addClass("-translate-x-full");
-        $("#openSidebar").removeClass("opacity-0");
-    });
-</script>
