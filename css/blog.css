@@ -1,0 +1,32 @@
+        /* Comic-style components */
+        .comic-burst {
+            @apply bg-yellow-400 px-6 py-2 rounded-full border-2 border-primary transform rotate-3 shadow-[4px_4px_0_0_#2D3142];
+        }
+
+        .comic-label {
+            @apply absolute top-6 right-6 bg-yellow-400 text-primary px-6 py-2 transform rotate-12 font-bold text-xl z-10 border-3 border-primary shadow-[4px_4px_0_0_#2D3142];
+        }
+
+        .comic-tag {
+            @apply inline-block bg-red-500 text-white px-6 py-2 rounded-full font-bold text-xl transform -rotate-2 border-2 border-white shadow-[4px_4px_0_0_rgba(0, 0, 0, 0.2)];
+        }
+
+        .comic-tag-small {
+            @apply absolute top-4 right-4 bg-yellow-400 text-primary px-4 py-1 transform rotate-12 font-bold text-sm border-2 border-primary shadow-[4px_4px_0_0_#2D3142];
+        }
+
+        .comic-button {
+            @apply inline-block bg-primary text-white px-6 py-3 rounded-xl transform hover:scale-105 hover:rotate-2 transition-all duration-300 border-3 border-primary shadow-[4px_4px_0_0_#B57D7D] font-bold text-lg;
+        }
+
+        .comic-card {
+            @apply group bg-white rounded-xl overflow-hidden border-4 border-primary shadow-[8px_8px_0_0_#2D3142] transform hover:-rotate-2 transition-all duration-300;
+        }
+
+        .comic-date {
+            @apply text-sm font-mystery text-secondary;
+        }
+
+        .comic-link {
+            @apply bg-primary text-white px-4 py-2 rounded-lg transform hover:scale-105 hover:rotate-3 transition-all duration-300 border-2 border-primary shadow-[4px_4px_0_0_#B57D7D] font-bold;
+        }

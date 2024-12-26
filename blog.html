@@ -27,6 +27,7 @@
             }
         }
     </script>
+    <link rel="stylesheet" href="/css/blog.css">
 </head>
 
 <!------------------- Sidebar ------------------->
@@ -40,73 +41,213 @@
 
 <body class="bg-white font-inter tracking-tighter text-primary">
 
-    <!-- Hero Section -->
-    <div class="bg-gradient-to-b from-accent/30 to-white py-20">
-        <div class="container mx-auto px-4">
-            <h1 class="text-6xl font-bold text-primary text-center mb-6">Latest Updates</h1>
-            <p class="text-xl text-primary/70 text-center max-w-2xl mx-auto">Stay informed with the latest news,
-                updates, and insights from the Adiklaas team.</p>
-            <div id="date-toast" class="text-center mt-4 text-primary/60"></div>
+    <!-- Comic-Style News Section -->
+    <div class="bg-gradient-to-b from-accent/30 to-white py-20 relative overflow-hidden">
+        <!-- Comic dot pattern background -->
+        <div
+            class="absolute inset-0 bg-[radial-gradient(#2D3142_1px,transparent_1px)] [background-size:16px_16px] opacity-5">
+        </div>
+
+        <!-- Comic burst header -->
+        <div class="container mx-auto px-4 relative">
+            <div class="text-center mb-12">
+                <!-- Comic-style newspaper name -->
+                <div class="relative inline-block">
+                    <div class="absolute inset-0 bg-yellow-400 transform rotate-2 rounded-xl"></div>
+                    <h1 class="relative text-8xl font-mystery bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary
+                          [text-shadow:4px_4px_0_#B57D7D] transform hover:scale-105 transition-transform duration-500">
+                        THE ADIKLAAS CHRONICLE
+                    </h1>
+                </div>
+
+                <!-- Newspaper tagline -->
+                <div class="mt-8 flex justify-center items-center space-x-4">
+                    <div class="comic-burst text-xl font-bold">VOLUME 1</div>
+                    <div class="text-3xl font-mystery text-secondary">|</div>
+                    <div class="comic-burst text-xl font-bold">ISSUE #42</div>
+                </div>
+
+                <!-- Dynamic date banner -->
+                <div class="relative mt-6">
+                    <div class="absolute inset-0 bg-primary transform -rotate-1 rounded-lg"></div>
+                    <div id="date-toast" class="relative bg-white px-8 py-3 rounded-lg border-4 border-primary
+                                         font-mystery text-2xl text-secondary inline-block
+                                         transform hover:rotate-2 transition-transform duration-300">
+                        ⚡ LATEST EDITION - JANUARY 2024 ⚡
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- Blog Grid -->
-    <div class="container mx-auto px-16 py-16">
+    <!-- Comic News Grid -->
+    <div class="container mx-auto px-8 py-16">
+        <!-- Breaking News Banner -->
+        <div class="relative mb-12">
+            <div class="absolute inset-0 bg-red-500 transform rotate-1"></div>
+            <div class="relative bg-white p-4 border-4 border-primary text-center">
+                <span class="font-mystery text-3xl text-red-500">BREAKING NEWS!</span>
+            </div>
+        </div>
+
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Featured Post -->
+            <!-- Featured Story Template -->
             <div class="col-span-1 md:col-span-2 lg:col-span-3">
-                <article
-                    class="bg-white rounded-2xl shadow-lg overflow-hidden transform hover:scale-[1.02] transition-transform">
-                    <img src="/images/group-pic.png" alt="Featured Post" class="w-full h-96 object-cover">
-                    <div class="p-8">
-                        <span class="text-secondary font-semibold">Featured</span>
-                        <h2 class="text-3xl font-bold mt-2 mb-4">The Future of Adiklaas: Our Vision for 2024</h2>
-                        <p class="text-primary/70 mb-6">Discover our ambitious plans and exciting developments coming to
-                            Adiklaas this year.</p>
-                        <div class="flex items-center justify-between">
-                            <span class="text-sm text-primary/60">January 15, 2024</span>
-                            <a href="#" class="text-primary font-semibold hover:text-secondary">Read More →</a>
-                        </div>
+                <article class="group relative bg-white rounded-2xl overflow-hidden
+                          border-4 border-primary shadow-[12px_12px_0_0_#2D3142]
+                          transform hover:-rotate-1 transition-all duration-300">
+                    <!-- Comic style label -->
+                    <div class="comic-label">EXCLUSIVE!</div>
+
+                    <!-- Featured image with overlay -->
+                    <div class="relative">
+                        <img src="/images/group-pic.png" alt="Featured Story"
+                            class="w-full h-96 object-cover transition-transform duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="p-8 relative">
+                        <!-- Category tag -->
+                        <div class="comic-tag">TOP STORY</div>
+
+                        <!-- Headline -->
+                        <h2 class="text-5xl font-bold mb-4 text-primary font-mystery">
+                            TECH TITANS EMERGE!
+                            <span class="block text-secondary mt-2">New Generation of Coders Rises!</span>
+                        </h2>
+
+                        <!-- Story preview -->
+                        <p class="text-primary/70 text-xl mb-6 font-bold">
+                            Witness the extraordinary journey of Adiklaas warriors as they conquer the digital realm!
+                            <span class="text-secondary">Full coverage inside!</span>
+                        </p>
+
+                        <!-- Action button -->
+                        <a href="#" class="comic-button">
+                            REVEAL THE TRUTH! →
+                        </a>
                     </div>
                 </article>
             </div>
 
-            <!-- Regular Posts -->
-            <article
-                class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-[1.02] transition-transform">
-                <img src="/images/adiklaas.png" alt="Blog Post" class="w-full h-48 object-cover">
+            <!-- News Card Template -->
+            <article class="group bg-white rounded-xl overflow-hidden border-4 border-primary 
+              shadow-[8px_8px_0_0_#2D3142] hover:-rotate-2 transition-all duration-300">
+                <div class="relative">
+                    <!-- Image with overlay -->
+                    <div class="relative overflow-hidden">
+                        <img src="/images/adiklaas.png" alt="News Story"
+                            class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                    </div>
+
+                    <!-- Story label -->
+                    <div class="absolute top-4 right-4 bg-yellow-400 text-primary px-4 py-1
+                    transform rotate-12 font-bold text-sm border-2 border-primary 
+                    shadow-[4px_4px_0_0_#2D3142]">
+                        TECH UPDATE
+                    </div>
+                </div>
+
+                <!-- Content -->
                 <div class="p-6">
-                    <h3 class="text-xl font-bold mb-3">New Features Released</h3>
-                    <p class="text-primary/70 mb-4">Check out the latest features added to enhance your experience.</p>
-                    <div class="flex items-center justify-between">
-                        <span class="text-sm text-primary/60">January 10, 2024</span>
-                        <a href="#" class="text-primary font-semibold hover:text-secondary">Read More →</a>
+                    <h3 class="text-2xl font-bold mb-3 font-mystery text-primary hover:text-secondary 
+                   transition-colors duration-300">
+                        CODE WARRIORS UNITE!
+                    </h3>
+                    <p class="text-primary/70 mb-4 font-medium">Epic battle against bugs reaches new heights!</p>
+
+                    <!-- Footer -->
+                    <div class="flex items-center justify-between mt-4">
+                        <span class="text-sm font-mystery text-secondary transform -rotate-2">
+                            KAPOW! Jan 15, 2024
+                        </span>
+                        <a href="#" class="bg-primary text-white px-4 py-2 rounded-lg font-bold
+                              hover:scale-105 hover:rotate-3 transition-all duration-300
+                              border-2 border-primary shadow-[4px_4px_0_0_#B57D7D]">
+                            READ MORE! →
+                        </a>
                     </div>
                 </div>
             </article>
 
-            <article
-                class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-[1.02] transition-transform">
-                <img src="/images/greenpakingscreen.gif" alt="Blog Post" class="w-full h-48 object-cover">
+            <article class="group bg-white rounded-xl overflow-hidden border-4 border-primary 
+              shadow-[8px_8px_0_0_#2D3142] hover:-rotate-2 transition-all duration-300">
+                <div class="relative">
+                    <!-- Image with overlay -->
+                    <div class="relative overflow-hidden">
+                        <img src="/images/adiklaas.png" alt="News Story"
+                            class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                    </div>
+
+                    <!-- Story label -->
+                    <div class="absolute top-4 right-4 bg-yellow-400 text-primary px-4 py-1
+                    transform rotate-12 font-bold text-sm border-2 border-primary 
+                    shadow-[4px_4px_0_0_#2D3142]">
+                        TECH UPDATE
+                    </div>
+                </div>
+
+                <!-- Content -->
                 <div class="p-6">
-                    <h3 class="text-xl font-bold mb-3">Community Spotlight</h3>
-                    <p class="text-primary/70 mb-4">Highlighting amazing projects from our community members.</p>
-                    <div class="flex items-center justify-between">
-                        <span class="text-sm text-primary/60">January 5, 2024</span>
-                        <a href="#" class="text-primary font-semibold hover:text-secondary">Read More →</a>
+                    <h3 class="text-2xl font-bold mb-3 font-mystery text-primary hover:text-secondary 
+                   transition-colors duration-300">
+                        CODE WARRIORS UNITE!
+                    </h3>
+                    <p class="text-primary/70 mb-4 font-medium">Epic battle against bugs reaches new heights!</p>
+
+                    <!-- Footer -->
+                    <div class="flex items-center justify-between mt-4">
+                        <span class="text-sm font-mystery text-secondary transform -rotate-2">
+                            KAPOW! Jan 15, 2024
+                        </span>
+                        <a href="#" class="bg-primary text-white px-4 py-2 rounded-lg font-bold
+                              hover:scale-105 hover:rotate-3 transition-all duration-300
+                              border-2 border-primary shadow-[4px_4px_0_0_#B57D7D]">
+                            READ MORE! →
+                        </a>
                     </div>
                 </div>
             </article>
 
-            <article
-                class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-[1.02] transition-transform">
-                <img src="/images/adiklaas.png" alt="Blog Post" class="w-full h-48 object-cover">
+            <article class="group bg-white rounded-xl overflow-hidden border-4 border-primary 
+              shadow-[8px_8px_0_0_#2D3142] hover:-rotate-2 transition-all duration-300">
+                <div class="relative">
+                    <!-- Image with overlay -->
+                    <div class="relative overflow-hidden">
+                        <img src="/images/adiklaas.png" alt="News Story"
+                            class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                    </div>
+
+                    <!-- Story label -->
+                    <div class="absolute top-4 right-4 bg-yellow-400 text-primary px-4 py-1
+                    transform rotate-12 font-bold text-sm border-2 border-primary 
+                    shadow-[4px_4px_0_0_#2D3142]">
+                        TECH UPDATE
+                    </div>
+                </div>
+
+                <!-- Content -->
                 <div class="p-6">
-                    <h3 class="text-xl font-bold mb-3">Tech Tips & Tricks</h3>
-                    <p class="text-primary/70 mb-4">Learn how to maximize your productivity with these tips.</p>
-                    <div class="flex items-center justify-between">
-                        <span class="text-sm text-primary/60">January 1, 2024</span>
-                        <a href="#" class="text-primary font-semibold hover:text-secondary">Read More →</a>
+                    <h3 class="text-2xl font-bold mb-3 font-mystery text-primary hover:text-secondary 
+                   transition-colors duration-300">
+                        CODE WARRIORS UNITE!
+                    </h3>
+                    <p class="text-primary/70 mb-4 font-medium">Epic battle against bugs reaches new heights!</p>
+
+                    <!-- Footer -->
+                    <div class="flex items-center justify-between mt-4">
+                        <span class="text-sm font-mystery text-secondary transform -rotate-2">
+                            KAPOW! Jan 15, 2024
+                        </span>
+                        <a href="#" class="bg-primary text-white px-4 py-2 rounded-lg font-bold
+                              hover:scale-105 hover:rotate-3 transition-all duration-300
+                              border-2 border-primary shadow-[4px_4px_0_0_#B57D7D]">
+                            READ MORE! →
+                        </a>
                     </div>
                 </div>
             </article>
@@ -116,26 +257,13 @@
     <div id="footer-container"></div>
 
     <script>
-        $(document).ready(function () {
-            // Date Toast
-            const options = {
-                weekday: 'long',
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric'
-            };
-            const currentDate = new Date().toLocaleDateString('en-US', options);
-
-            toastr.options = {
-                "positionClass": "toast-top-right",
-                "timeOut": "5000",
-                "closeButton": true,
-                "progressBar": true
-            };
-
-            toastr.success(`Today is ${currentDate}`, 'Welcome to Our Blog!');
-        });
+        // Dynamic date display with comic style
+        const dateToast = document.getElementById('date-toast');
+        const today = new Date();
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        dateToast.innerHTML = `⚡ ${today.toLocaleDateString('en-US', options)} ⚡`;
     </script>
+
     <script>
         $(document).ready(function () {
             $("#sidebar-container").load("components/sidebar.html", function () {
