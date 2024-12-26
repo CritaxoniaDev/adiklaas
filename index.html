@@ -255,6 +255,40 @@
 
         startScramble();
     </script>
+
+    <script>
+        // Disable right-click
+        document.addEventListener('contextmenu', (e) => e.preventDefault());
+
+        // Disable keyboard shortcuts
+        document.addEventListener('keydown', (e) => {
+            if (
+                // Disable F12
+                e.key === 'F12' ||
+                // Disable Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+Shift+C
+                (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) ||
+                // Disable Ctrl+U (view source)
+                (e.ctrlKey && e.key === 'U')
+            ) {
+                e.preventDefault();
+            }
+        });
+
+        // Clear console on open
+        console.clear();
+        // Override console methods
+        ['log', 'debug', 'info', 'warn', 'error'].forEach(method => {
+            console[method] = () => { };
+        });
+
+        // Detect DevTools
+        let devtools = function () { };
+        devtools.toString = function () {
+            document.querySelector('.gallery-content').style.display = 'none';
+            return '';
+        }
+        console.log('%c', devtools);
+    </script>
 </body>
 
 </html>
