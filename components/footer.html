@@ -1,71 +1,121 @@
-<footer class="bg-[#172121] text-white py-12 relative transform -skew-y-1">
-  <!-- Comic-style zigzag border -->
-  <div class="absolute top-0 left-0 right-0 h-8 bg-yellow-400" style="clip-path: polygon(0% 0%, 5% 100%, 10% 0%, 15% 100%, 20% 0%, 25% 100%, 30% 0%, 35% 100%, 40% 0%, 45% 100%, 50% 0%, 55% 100%, 60% 0%, 65% 100%, 70% 0%, 75% 100%, 80% 0%, 85% 100%, 90% 0%, 95% 100%, 100% 0%)"></div>
+<footer class="bg-primary text-white py-12 relative overflow-hidden">
+  <!-- Comic-style halftone pattern background -->
+  <div class="absolute inset-0 bg-[radial-gradient(#2D3142_1px,transparent_1px)] [background-size:16px_16px] opacity-5"></div>
 
-  <div class="container mx-auto px-4 pt-8">
-    <div class="flex flex-wrap justify-between">
-      <!-- Company Info Section -->
-      <div class="w-full md:w-1/4 mb-8 md:mb-0 transform rotate-2">
-        <div class="bg-white p-6 rounded-xl border-4 border-yellow-400 shadow-xl">
-          <h2 class="text-xl font-bold mb-4 flex items-center text-primary">
-            <img src="images/adiklaas.png" alt="Company Logo" class="h-10 mr-2 hover:rotate-12 transition-transform">
-          </h2>
-          <p class="text-primary font-bold">POW! Leading the industry with SUPER solutions! BOOM! Exceptional service!</p>
-        </div>
-      </div>
+  <!-- Comic-style burst border -->
+  <div class="absolute top-0 left-0 right-0 h-12 flex justify-around">
+      <div class="px-6 py-1 font-mystery text-primary text-xl transform -rotate-6 border-2 border-primary shadow-lg bg-yellow-400">POW!</div>
+      <div class="px-6 py-1 font-mystery text-primary text-xl transform -rotate-6 border-2 border-primary shadow-lg bg-secondary">BAM!</div>
+      <div class="px-6 py-1 font-mystery text-primary text-xl transform -rotate-6 border-2 border-primary shadow-lg bg-yellow-400">ZOOM!</div>
+      <div class="px-6 py-1 font-mystery text-primary text-xl transform -rotate-6 border-2 border-primary shadow-lg bg-secondary">BANG!</div>
+      <div class="px-6 py-1 font-mystery text-primary text-xl transform -rotate-6 border-2 border-primary shadow-lg bg-yellow-400">BOOM!</div>
+  </div>
 
-      <!-- Quick Links Section -->
-      <div class="w-full md:w-1/4 mb-8 md:mb-0 transform -rotate-1">
-        <div class="bg-primary p-6 rounded-xl border-4 border-yellow-400">
-          <h2 class="text-xl font-bold mb-6 text-yellow-400">QUICK LINKS!</h2>
-          <ul class="space-y-3">
-            <li><a href="#" class="text-white hover:text-yellow-400 transition-colors duration-300 flex items-center font-bold">
-              <span class="mr-2">💥</span>About Us</a></li>
-            <li><a href="#" class="text-white hover:text-yellow-400 transition-colors duration-300 flex items-center font-bold">
-              <span class="mr-2">💥</span>Services</a></li>
-            <li><a href="#" class="text-white hover:text-yellow-400 transition-colors duration-300 flex items-center font-bold">
-              <span class="mr-2">💥</span>Contact</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Resources Section -->
-      <div class="w-full md:w-1/4 mb-8 md:mb-0 transform rotate-1">
-        <div class="bg-yellow-400 p-6 rounded-xl border-4 border-primary">
-          <h2 class="text-xl font-bold mb-6 text-primary">RESOURCES!</h2>
-          <ul class="space-y-3">
-            <li><a href="#" class="text-primary hover:text-white transition-colors duration-300 flex items-center font-bold">
-              <span class="mr-2">⚡</span>Blog</a></li>
-            <li><a href="#" class="text-primary hover:text-white transition-colors duration-300 flex items-center font-bold">
-              <span class="mr-2">⚡</span>FAQs</a></li>
-            <li><a href="#" class="text-primary hover:text-white transition-colors duration-300 flex items-center font-bold">
-              <span class="mr-2">⚡</span>Support</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Newsletter Section -->
-      <div class="w-full md:w-1/4 mb-8 md:mb-0 transform -rotate-2">
-        <div class="bg-white p-6 rounded-xl border-4 border-primary shadow-xl">
-          <div class="w-full flex items-center justify-center overflow-hidden rounded-lg mb-4">
-            <img src="images/greenpakingscreen.gif" alt="Banner" class="w-full hover:scale-110 transition-transform duration-300">
+  <div class="container mx-auto px-4 pt-12">
+      <div class="flex flex-wrap justify-between gap-8">
+          <!-- Company Info Section -->
+          <div class="w-full md:w-1/4 transform hover:rotate-2 transition-all duration-300">
+              <div class="bg-white p-6 rounded-xl border-4 border-yellow-400 shadow-[8px_8px_0_0_#B57D7D] hover:shadow-[12px_12px_0_0_#B57D7D] transition-all duration-300">
+                  <h2 class="text-2xl font-mystery mb-4 flex items-center text-primary">
+                      <img src="images/adiklaas.png" alt="Company Logo" class="h-12 mr-2 hover:rotate-12 transition-transform">
+                      <span class="bg-yellow-400 px-4 py-1 rounded-lg transform -rotate-2">SUPER HQ!</span>
+                  </h2>
+                  <p class="text-primary font-bold text-lg leading-relaxed">
+                      <span class="text-secondary font-mystery text-2xl">POW!</span> Leading the industry with 
+                      <span class="bg-yellow-400 px-2 rounded">SUPER</span> solutions! 
+                      <span class="text-secondary font-mystery text-2xl">BOOM!</span>
+                  </p>
+              </div>
           </div>
-          <div class="mt-4">
-            <h3 class="text-lg font-bold mb-4 text-primary">JOIN OUR LEAGUE!</h3>
-            <div class="flex">
-              <input type="email" placeholder="Your Email Here!" class="bg-primary text-white px-4 py-2 rounded-l-lg focus:outline-none w-full font-bold">
-              <button class="bg-yellow-400 hover:bg-yellow-500 px-4 py-2 rounded-r-lg transition-colors duration-300 text-primary font-bold transform hover:scale-110">
-                ZAP!
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <!-- Copyright Section -->
-    <div class="border-t-4 border-yellow-400 mt-8 pt-8 text-center">
-      <p class="font-bold text-yellow-400">&copy; <span id="copyright-year"></span> ADIKLAAS ALL RIGHTS RESERVED!</p>
-    </div>
+          <!-- Quick Links Section -->
+          <div class="w-full md:w-1/4 transform hover:-rotate-2 transition-all duration-300">
+              <div class="bg-primary p-6 rounded-xl border-4 border-yellow-400 shadow-[8px_8px_0_0_#000000] hover:shadow-[12px_12px_0_0_#000000]">
+                  <h2 class="text-2xl font-mystery mb-6 text-yellow-400 transform -rotate-2">QUICK STRIKES!</h2>
+                  <ul class="space-y-4">
+                      <li class="transform hover:translate-x-2 transition-transform">
+                          <a href="#" class="text-white hover:text-yellow-400 transition-colors duration-300 flex items-center font-bold text-lg">
+                              <span class="inline-block bg-white/20 w-8 h-8 rounded-full text-center leading-8 transform -rotate-12 mr-2">💥</span>
+                              About Our League
+                          </a>
+                      </li>
+                      <li class="transform hover:translate-x-2 transition-transform">
+                          <a href="#" class="text-white hover:text-yellow-400 transition-colors duration-300 flex items-center font-bold text-lg">
+                              <span class="inline-block bg-white/20 w-8 h-8 rounded-full text-center leading-8 transform -rotate-12 mr-2">💥</span>
+                              Secret Services
+                          </a>
+                      </li>
+                      <li class="transform hover:translate-x-2 transition-transform">
+                          <a href="#" class="text-white hover:text-yellow-400 transition-colors duration-300 flex items-center font-bold text-lg">
+                              <span class="inline-block bg-white/20 w-8 h-8 rounded-full text-center leading-8 transform -rotate-12 mr-2">💥</span>
+                              Hero Contact
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+
+          <!-- Resources Section -->
+          <div class="w-full md:w-1/4 transform hover:rotate-2 transition-all duration-300">
+              <div class="bg-yellow-400 p-6 rounded-xl border-4 border-primary shadow-[8px_8px_0_0_#2D3142] hover:shadow-[12px_12px_0_0_#2D3142]">
+                  <h2 class="text-2xl font-mystery mb-6 text-primary transform rotate-2">POWER-UPS!</h2>
+                  <ul class="space-y-4">
+                      <li class="transform hover:translate-x-2 transition-transform">
+                          <a href="#" class="text-primary hover:text-white transition-colors duration-300 flex items-center font-bold text-lg">
+                              <span class="inline-block bg-white/20 w-8 h-8 rounded-full text-center leading-8 transform -rotate-12 mr-2">⚡</span>
+                              Secret Blog
+                          </a>
+                      </li>
+                      <li class="transform hover:translate-x-2 transition-transform">
+                          <a href="#" class="text-primary hover:text-white transition-colors duration-300 flex items-center font-bold text-lg">
+                              <span class="inline-block bg-white/20 w-8 h-8 rounded-full text-center leading-8 transform -rotate-12 mr-2">⚡</span>
+                              Hero FAQs
+                          </a>
+                      </li>
+                      <li class="transform hover:translate-x-2 transition-transform">
+                          <a href="#" class="text-primary hover:text-white transition-colors duration-300 flex items-center font-bold text-lg">
+                              <span class="inline-block bg-white/20 w-8 h-8 rounded-full text-center leading-8 transform -rotate-12 mr-2">⚡</span>
+                              Backup Support
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+
+          <!-- Newsletter Section -->
+          <div class="w-full md:w-1/4 transform hover:-rotate-2 transition-all duration-300">
+              <div class="bg-white p-6 rounded-xl border-4 border-primary shadow-[8px_8px_0_0_#2D3142] hover:shadow-[12px_12px_0_0_#2D3142]">
+                  <div class="relative overflow-hidden rounded-lg mb-4 border-2 border-primary">
+                      <img src="images/greenpakingscreen.gif" alt="Banner" class="w-full hover:scale-110 transition-transform duration-300">
+                      <div class="absolute top-2 right-2 bg-yellow-400 px-3 py-1 rounded-full transform rotate-12 text-primary font-bold text-sm border-2 border-primary">
+                          NEW!
+                      </div>
+                  </div>
+                  <div class="mt-4">
+                      <h3 class="text-xl font-mystery mb-4 text-primary">JOIN THE HEROES!</h3>
+                      <div class="flex">
+                          <input type="email" placeholder="YOUR SECRET IDENTITY!" class="bg-primary text-white px-4 py-2 rounded-l-lg focus:outline-none w-full font-bold placeholder-white/70">
+                          <button class="bg-yellow-400 hover:bg-yellow-500 px-6 py-2 rounded-r-lg transition-all duration-300 text-primary font-bold hover:scale-110 hover:rotate-3 border-2 border-primary">
+                              POW!
+                          </button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <!-- Copyright Section -->
+      <div class="mt-12 pt-8 text-center relative">
+          <div class="absolute top-0 left-0 right-0 h-2 bg-yellow-400"></div>
+          <p class="font-mystery text-2xl text-yellow-400">
+              <span class="inline-block transform hover:scale-110 transition-transform">
+                  &copy; <span id="copyright-year"></span> ADIKLAAS
+              </span>
+              <span class="text-secondary mx-2">|</span>
+              <span class="inline-block transform hover:scale-110 transition-transform">
+                  ALL RIGHTS RESERVED!
+              </span>
+          </p>
+      </div>
   </div>
 </footer>
