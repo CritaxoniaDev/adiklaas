@@ -1,7 +1,20 @@
 .flip-card {
     perspective: 1000px;
-    height: 470px;
+    height: 350px; /* Default for mobile */
 }
+
+@media (min-width: 640px) {
+    .flip-card {
+        height: 430px; /* Tablet size */
+    }
+}
+
+@media (min-width: 768px) {
+    .flip-card {
+        height: 470px; /* Desktop size */
+    }
+}
+
 .flip-card-inner {
     position: relative;
     width: 100%;
@@ -9,9 +22,11 @@
     transform-style: preserve-3d;
     transition: transform 0.7s;
 }
+
 .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
 }
+
 .flip-card-front,
 .flip-card-back {
     position: absolute;
@@ -20,7 +35,7 @@
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
 }
+
 .flip-card-back {
     transform: rotateY(180deg);
 }
-
