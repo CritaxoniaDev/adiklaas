@@ -3632,8 +3632,11 @@
         document.getElementById('auth-overlay').style.display = 'flex';
 
         const validateKey = (input) => {
-            const target = "YWRpa2xhYXMyMDI0";
-            return btoa(input) === target;
+            const salt = "x9k2m";
+            const target = "6164696b6c6161733230323478396b326d";
+            const hash = Array.from(input + salt).reduce((acc, char) =>
+                acc + char.charCodeAt(0).toString(16), '');
+            return hash === target;
         }
 
         function checkPassword() {
