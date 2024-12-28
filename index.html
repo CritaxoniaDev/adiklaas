@@ -34,9 +34,16 @@
 
 <!------------------- Sidebar ------------------->
 <div class="flex justify-between items-center">
+    <!-- Sidebar container for dynamic loading -->
     <div id="sidebar-container"></div>
-    <img src="/images/adiklaas.png" alt="Adiklaas Logo" class="w-32 h-auto fixed top-6 right-6 z-10">
+    
+    <!-- Logo with responsive sizing -->
+    <img src="/images/adiklaas.png" 
+         alt="Adiklaas Logo" 
+         class="w-24 sm:w-32 h-auto fixed top-4 sm:top-6 right-4 sm:right-6 z-10 
+                transition-transform duration-300 hover:scale-110">
 </div>
+
 
 <!------------------- Body ------------------->
 
@@ -90,54 +97,64 @@
 
     <!-- Hero Section -->
     <section style="margin-top: -20px"
-        class="min-h-screen flex items-center justify-center bg-gradient-to-b from-accent/30 to-white overflow-hidden">
+        class="min-h-screen flex items-center justify-center bg-gradient-to-b from-accent/30 to-white overflow-hidden py-8 sm:py-0">
         <div class="max-w-[1230px] mx-auto text-center px-4">
             <!-- Comic-style image frame -->
-            <div class="relative w-96 mx-auto overflow-hidden transform rotate-2 border-8 border-primary shadow-xl">
+            <div class="relative w-72 sm:w-96 mx-auto overflow-hidden transform rotate-2 
+                    border-4 sm:border-8 border-primary shadow-xl">
                 <div class="absolute inset-0 bg-gradient-to-b from-transparent via-white/50 to-white"></div>
                 <img src="/images/group-pic.png" alt="Group Picture" class="w-full h-full object-cover">
                 <!-- Comic corner fold effect -->
-                <div class="absolute top-0 right-0 w-12 h-12 bg-white transform rotate-[-10deg] origin-top-right"></div>
+                <div class="absolute top-0 right-0 w-8 sm:w-12 h-8 sm:h-12 bg-white 
+                        transform rotate-[-10deg] origin-top-right"></div>
             </div>
 
             <!-- Comic-style heading -->
-            <h1 class="text-7xl font-bold mb-6 tracking-tight transform -rotate-1">
-                <div class="mb-2 text-3d font-mystery bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary 
-                            comic-text-shadow relative">
+            <h1 class="text-4xl sm:text-7xl font-bold mb-4 sm:mb-6 tracking-tight transform -rotate-1">
+                <div class="mb-2 text-3d font-mystery bg-clip-text text-transparent 
+                        bg-gradient-to-r from-primary to-secondary
+                        comic-text-shadow relative">
                     <span class="absolute inset-0 text-yellow-400 blur-sm">Welcome ka Dito sa</span>
                     Welcome ka Dito sa
                 </div>
-                <div id="animated-text" class="tracking-tight font-mystery bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary 
-                             comic-text-shadow transform rotate-2">
+                <div id="animated-text" class="tracking-tight font-mystery bg-clip-text text-transparent 
+                        bg-gradient-to-r from-primary to-secondary
+                        comic-text-shadow transform rotate-2">
                     Lithan Adiklaas
                 </div>
             </h1>
 
             <!-- Comic-style quote bubble -->
-            <div class="relative max-w-2xl mx-auto bg-white p-8 rounded-3xl border-4 border-primary transform -rotate-1 
-                        shadow-xl before:content-[''] before:absolute before:bottom-[-20px] before:left-[50%] 
-                        before:w-0 before:h-0 before:border-l-[20px] before:border-l-transparent 
-                        before:border-t-[20px] before:border-t-primary before:border-r-[20px] 
-                        before:border-r-transparent">
-                <p class="text-2xl font-bold text-primary relative">
+            <div class="relative max-w-sm sm:max-w-2xl mx-auto bg-white p-6 sm:p-8 
+                    rounded-2xl sm:rounded-3xl border-3 sm:border-4 border-primary 
+                    transform -rotate-1 shadow-xl 
+                    before:content-[''] before:absolute before:bottom-[-15px] sm:before:bottom-[-20px] 
+                    before:left-[50%] before:w-0 before:h-0 
+                    before:border-l-[15px] sm:before:border-l-[20px] before:border-l-transparent
+                    before:border-t-[15px] sm:before:border-t-[20px] before:border-t-primary 
+                    before:border-r-[15px] sm:before:border-r-[20px] before:border-r-transparent">
+                <p class="text-xl sm:text-2xl font-bold text-primary relative">
                     "United we Fall, divided we stand"
-                    <span class="block mt-6 text-lg font-medium text-primary/60 transform hover:text-secondary 
-                               transition-colors duration-300">
+                    <span class="block mt-4 sm:mt-6 text-base sm:text-lg font-medium text-primary/60 
+                           transform hover:text-secondary transition-colors duration-300">
                         <span class="inline-block mr-2">—</span>
                         the ancient one Charlemengay
-                        <span class="block mt-1 text-sm font-light tracking-wider">2024</span>
+                        <span class="block mt-1 text-xs sm:text-sm font-light tracking-wider">2024</span>
                     </span>
                 </p>
             </div>
 
             <!-- Comic-style button -->
-            <div class="mt-10">
-                <a href="#discover" class="group relative inline-flex items-center gap-2 px-8 py-4 bg-primary text-white rounded-xl 
-                          overflow-hidden shadow-2xl hover:shadow-primary/50 transition-all duration-300 
-                          transform hover:-translate-y-1 hover:rotate-2 border-4 border-primary">
-                    <span class="relative font-bold tracking-tighter text-xl">GUSTO MO MAKITA!</span>
-                    <svg class="relative w-6 h-6 transform group-hover:translate-x-1 transition-transform duration-300"
-                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="mt-8 sm:mt-10">
+                <a href="#discover" class="group relative inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 
+                      bg-primary text-white rounded-xl overflow-hidden 
+                      shadow-xl hover:shadow-primary/50 transition-all duration-300
+                      transform hover:-translate-y-1 hover:rotate-2 
+                      border-3 sm:border-4 border-primary">
+                    <span class="relative font-bold tracking-tighter text-lg sm:text-xl">GUSTO MO MAKITA!</span>
+                    <svg class="relative w-5 h-5 sm:w-6 sm:h-6 
+                          transform group-hover:translate-x-1 transition-transform duration-300" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
                     </svg>
                 </a>
