@@ -14,6 +14,35 @@
         .swiper-container {
             overflow: hidden;
         }
+
+        .shadow-comic {
+            box-shadow: 5px 5px 0px #2D3142;
+        }
+
+        .comic-text {
+            text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+            font-family: 'Bangers', cursive;
+            letter-spacing: 1px;
+        }
+
+        .comic-text-small {
+            text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
+        }
+
+        .custom-nav-btn::after {
+            display: none;
+        }
+
+        .swiper-pagination-bullet {
+            background: #2D3142;
+            border: 2px solid #fff;
+            width: 12px;
+            height: 12px;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: #F7D832;
+        }
     </style>
     <script>
         tailwind.config = {
@@ -34,98 +63,189 @@
 </head>
 
 <!------------------- Sidebar ------------------->
-
 <div class="flex justify-between items-center">
     <!-- Sidebar container for dynamic loading -->
     <div id="sidebar-container"></div>
-    
+
     <!-- Logo with responsive sizing -->
-    <img src="/images/adiklaas.png" 
-         alt="Adiklaas Logo" 
-         class="w-24 sm:w-32 h-auto fixed top-4 sm:top-6 right-4 sm:right-6 z-10 
+    <img src="/images/adiklaas.png" alt="Adiklaas Logo" class="w-24 sm:w-32 h-auto fixed top-4 sm:top-6 right-4 sm:right-6 z-10 
                 transition-transform duration-300 hover:scale-110">
 </div>
 
-<body class="bg-white font-inter tracking-tighter text-primary">
-    <div class="flex justify-between items-center">
-        <div id="sidebar-container"></div>
-        <img src="/images/adiklaas.png" alt="Adiklaas Logo" class="w-32 h-auto fixed top-6 right-6 z-10">
-    </div>
+<body class="bg-white font-inter tracking-tighter text-primary pt-20">
 
-    <div class="container mx-auto px-4 py-8">
-        <h1 class="text-4xl font-bold mb-8">Clips</h1>
-        <div class="swiper-container">
+    <div class="container mx-auto px-20 py-8">
+        <h1 class="text-4xl font-bold mb-8 relative inline-block">
+            <span class="relative z-10 text-primary">Comic Clips</span>
+            <div class="absolute -bottom-2 left-0 w-full h-4 bg-yellow-400 -rotate-2 z-0"></div>
+        </h1>
+
+        <div class="swiper-container comic-swiper relative">
             <div class="swiper-wrapper">
                 <!-- Video Card -->
-                <div class="swiper-slide relative group w-80 transition-transform duration-300">
-                    <video src="videos/10000000_25199410196370862_229852735403372671_n.mp4" class="w-full h-64 object-cover rounded-lg shadow-lg" controls></video>
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-lg"></div>
-                    <div class="absolute bottom-4 left-4 text-white">
-                        <h2 class="text-2xl font-bold">Video Title</h2>
-                        <p class="text-sm">Description of the video goes here.</p>
+                <div class="swiper-slide relative group w-80">
+                    <div class="transform transition-transform duration-300 hover:scale-105 hover:-rotate-2">
+                        <div class="relative">
+                            <div class="absolute -inset-2 bg-yellow-400 rounded-lg transform rotate-1"></div>
+                            <div class="relative bg-white p-2 rounded-lg shadow-comic">
+                                <video src="videos/10000000_25199410196370862_229852735403372671_n.mp4"
+                                    class="w-full h-64 object-cover rounded-lg" controls></video>
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-lg">
+                                </div>
+                                <div class="absolute bottom-4 left-4 text-white">
+                                    <h2 class="text-2xl font-bold comic-text">Video Title</h2>
+                                    <p class="text-sm comic-text-small">Description of the video goes here.</p>
+                                </div>
+                                <div
+                                    class="absolute top-4 right-4 bg-yellow-400 text-primary px-4 py-1 rounded-full font-bold transform rotate-3 shadow-lg border-2 border-primary">
+                                    #1</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="absolute top-4 right-4 bg-yellow-400 text-primary px-4 py-1 rounded-full font-bold">#1</div>
-                </div>                          
-                <div class="swiper-slide relative group w-80 transition-transform duration-300">
-                    <video src="videos/427892087_7634747263223274_2917978220635479670_n.mp4" class="w-full h-64 object-cover rounded-lg shadow-lg" controls></video>
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-lg"></div>
-                    <div class="absolute bottom-4 left-4 text-white">
-                        <h2 class="text-2xl font-bold">Video Title</h2>
-                        <p class="text-sm">Description of the video goes here.</p>
-                    </div>
-                    <div class="absolute top-4 right-4 bg-yellow-400 text-primary px-4 py-1 rounded-full font-bold">#2</div>
                 </div>
-                <div class="swiper-slide relative group w-80 transition-transform duration-300">
-                    <video src="videos/video6291748706316193085.mp4" class="w-full h-64 object-cover rounded-lg shadow-lg" controls></video>
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-lg"></div>
-                    <div class="absolute bottom-4 left-4 text-white">
-                        <h2 class="text-2xl font-bold">Video Title</h2>
-                        <p class="text-sm">Description of the video goes here.</p>
+                <div class="swiper-slide relative group w-80">
+                    <div class="transform transition-transform duration-300 hover:scale-105 hover:-rotate-2">
+                        <div class="relative">
+                            <div class="absolute -inset-2 bg-yellow-400 rounded-lg transform rotate-1"></div>
+                            <div class="relative bg-white p-2 rounded-lg shadow-comic">
+                                <video src="videos/427892087_7634747263223274_2917978220635479670_n.mp4"
+                                    class="w-full h-64 object-cover rounded-lg" controls></video>
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-lg">
+                                </div>
+                                <div class="absolute bottom-4 left-4 text-white">
+                                    <h2 class="text-2xl font-bold comic-text">Epic Moment</h2>
+                                    <p class="text-sm comic-text-small">Watch this amazing clip!</p>
+                                </div>
+                                <div
+                                    class="absolute top-4 right-4 bg-yellow-400 text-primary px-4 py-1 rounded-full font-bold transform rotate-3 shadow-lg border-2 border-primary">
+                                    #2</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="absolute top-4 right-4 bg-yellow-400 text-primary px-4 py-1 rounded-full font-bold">#3</div>
                 </div>
-                <div class="swiper-slide relative group w-80 transition-transform duration-300">
-                    <video src="/images/video-thumbnail.jpg" class="w-full h-64 object-cover rounded-lg shadow-lg" controls></video>
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-lg"></div>
-                    <div class="absolute bottom-4 left-4 text-white">
-                        <h2 class="text-2xl font-bold">Video Title</h2>
-                        <p class="text-sm">Description of the video goes here.</p>
+
+                <div class="swiper-slide relative group w-80">
+                    <div class="transform transition-transform duration-300 hover:scale-105 hover:-rotate-2">
+                        <div class="relative">
+                            <div class="absolute -inset-2 bg-yellow-400 rounded-lg transform rotate-1"></div>
+                            <div class="relative bg-white p-2 rounded-lg shadow-comic">
+                                <video src="videos/video6291748706316193085.mp4"
+                                    class="w-full h-64 object-cover rounded-lg" controls></video>
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-lg">
+                                </div>
+                                <div class="absolute bottom-4 left-4 text-white">
+                                    <h2 class="text-2xl font-bold comic-text">Awesome Play</h2>
+                                    <p class="text-sm comic-text-small">Check out this move!</p>
+                                </div>
+                                <div
+                                    class="absolute top-4 right-4 bg-yellow-400 text-primary px-4 py-1 rounded-full font-bold transform rotate-3 shadow-lg border-2 border-primary">
+                                    #3</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="absolute top-4 right-4 bg-yellow-400 text-primary px-4 py-1 rounded-full font-bold">#4</div>
                 </div>
-                <div class="swiper-slide relative group w-80 transition-transform duration-300">
-                    <video src="/images/video-thumbnail.jpg" class="w-full h-64 object-cover rounded-lg shadow-lg" controls></video>
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-lg"></div>
-                    <div class="absolute bottom-4 left-4 text-white">
-                        <h2 class="text-2xl font-bold">Video Title</h2>
-                        <p class="text-sm">Description of the video goes here.</p>
+                <div class="swiper-slide relative group w-80">
+                    <div class="transform transition-transform duration-300 hover:scale-105 hover:-rotate-2">
+                        <div class="relative">
+                            <div class="absolute -inset-2 bg-yellow-400 rounded-lg transform rotate-1"></div>
+                            <div class="relative bg-white p-2 rounded-lg shadow-comic">
+                                <video src="/images/video-thumbnail.jpg" class="w-full h-64 object-cover rounded-lg"
+                                    controls></video>
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-lg">
+                                </div>
+                                <div class="absolute bottom-4 left-4 text-white">
+                                    <h2 class="text-2xl font-bold comic-text">Cool Clip</h2>
+                                    <p class="text-sm comic-text-small">More amazing content!</p>
+                                </div>
+                                <div
+                                    class="absolute top-4 right-4 bg-yellow-400 text-primary px-4 py-1 rounded-full font-bold transform rotate-3 shadow-lg border-2 border-primary">
+                                    #4</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="absolute top-4 right-4 bg-yellow-400 text-primary px-4 py-1 rounded-full font-bold">#5</div>
                 </div>
-                <div class="swiper-slide relative group w-80 transition-transform duration-300">
-                    <video src="/images/video-thumbnail.jpg" class="w-full h-64 object-cover rounded-lg shadow-lg" controls></video>
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-lg"></div>
-                    <div class="absolute bottom-4 left-4 text-white">
-                        <h2 class="text-2xl font-bold">Video Title</h2>
-                        <p class="text-sm">Description of the video goes here.</p>
+                <div class="swiper-slide relative group w-80">
+                    <div class="transform transition-transform duration-300 hover:scale-105 hover:-rotate-2">
+                        <div class="relative">
+                            <div class="absolute -inset-2 bg-yellow-400 rounded-lg transform rotate-1"></div>
+                            <div class="relative bg-white p-2 rounded-lg shadow-comic">
+                                <video src="/images/video-thumbnail.jpg" class="w-full h-64 object-cover rounded-lg"
+                                    controls></video>
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-lg">
+                                </div>
+                                <div class="absolute bottom-4 left-4 text-white">
+                                    <h2 class="text-2xl font-bold comic-text">Cool Clip</h2>
+                                    <p class="text-sm comic-text-small">More amazing content!</p>
+                                </div>
+                                <div
+                                    class="absolute top-4 right-4 bg-yellow-400 text-primary px-4 py-1 rounded-full font-bold transform rotate-3 shadow-lg border-2 border-primary">
+                                    #4</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="absolute top-4 right-4 bg-yellow-400 text-primary px-4 py-1 rounded-full font-bold">#6</div>
                 </div>
-                <div class="swiper-slide relative group w-80 transition-transform duration-300">
-                    <video src="/images/video-thumbnail.jpg" class="w-full h-64 object-cover rounded-lg shadow-lg" controls></video>
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-lg"></div>
-                    <div class="absolute bottom-4 left-4 text-white">
-                        <h2 class="text-2xl font-bold">Video Title</h2>
-                        <p class="text-sm">Description of the video goes here.</p>
+                <div class="swiper-slide relative group w-80">
+                    <div class="transform transition-transform duration-300 hover:scale-105 hover:-rotate-2">
+                        <div class="relative">
+                            <div class="absolute -inset-2 bg-yellow-400 rounded-lg transform rotate-1"></div>
+                            <div class="relative bg-white p-2 rounded-lg shadow-comic">
+                                <video src="/images/video-thumbnail.jpg" class="w-full h-64 object-cover rounded-lg"
+                                    controls></video>
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-lg">
+                                </div>
+                                <div class="absolute bottom-4 left-4 text-white">
+                                    <h2 class="text-2xl font-bold comic-text">Cool Clip</h2>
+                                    <p class="text-sm comic-text-small">More amazing content!</p>
+                                </div>
+                                <div
+                                    class="absolute top-4 right-4 bg-yellow-400 text-primary px-4 py-1 rounded-full font-bold transform rotate-3 shadow-lg border-2 border-primary">
+                                    #4</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="absolute top-4 right-4 bg-yellow-400 text-primary px-4 py-1 rounded-full font-bold">#7</div>
+                </div>
+                <div class="swiper-slide relative group w-80">
+                    <div class="transform transition-transform duration-300 hover:scale-105 hover:-rotate-2">
+                        <div class="relative">
+                            <div class="absolute -inset-2 bg-yellow-400 rounded-lg transform rotate-1"></div>
+                            <div class="relative bg-white p-2 rounded-lg shadow-comic">
+                                <video src="/images/video-thumbnail.jpg" class="w-full h-64 object-cover rounded-lg"
+                                    controls></video>
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-lg">
+                                </div>
+                                <div class="absolute bottom-4 left-4 text-white">
+                                    <h2 class="text-2xl font-bold comic-text">Cool Clip</h2>
+                                    <p class="text-sm comic-text-small">More amazing content!</p>
+                                </div>
+                                <div
+                                    class="absolute top-4 right-4 bg-yellow-400 text-primary px-4 py-1 rounded-full font-bold transform rotate-3 shadow-lg border-2 border-primary">
+                                    #4</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <!-- Add Pagination -->
-            <div class="swiper-pagination"></div>
-            <!-- Add Navigation -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+
+            <!-- Custom Navigation Buttons -->
+            <div class="swiper-button-next custom-nav-btn !right-2">
+                <div class="bg-yellow-400 p-4 rounded-full shadow-lg border-2 border-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </div>
+            </div>
+            <div class="swiper-button-prev custom-nav-btn !left-2">
+                <div class="bg-yellow-400 p-4 rounded-full shadow-lg border-2 border-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Custom Pagination -->
+            <div class="swiper-pagination !bottom-4"></div>
         </div>
     </div>
 
@@ -134,175 +254,204 @@
             <div id="sidebar-container"></div>
             <img src="/images/adiklaas.png" alt="Adiklaas Logo" class="w-32 h-auto fixed top-6 right-6 z-10">
         </div>
-    
-        <div class="container mx-auto px-4 py-8">
+
+        <div class="container mx-auto px-20 py-8">
             <h1 class="text-4xl font-bold mb-8">Videos</h1>
             <div class="gap-8 columns-3">
                 <!-- Video Card -->
                 <div class="relative group mb-8 transition-transform duration-300 hover:scale-105">
-                    <video src="/images/video-thumbnail.jpg" alt="Video Thumbnail" class="w-full h-64 object-cover rounded-lg shadow-lg">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-lg"></div>
-                    <div class="absolute bottom-4 left-4 text-white">
-                        <h2 class="text-2xl font-bold">Video Title</h2>
-                        <p class="text-sm">Description of the video goes here.</p>
-                    </div>
-                    <div class="absolute top-4 right-4 bg-yellow-400 text-primary px-4 py-1 rounded-full font-bold">#1</div>
+                    <video src="/images/video-thumbnail.jpg" alt="Video Thumbnail"
+                        class="w-full h-64 object-cover rounded-lg shadow-lg">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-lg"></div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h2 class="text-2xl font-bold">Video Title</h2>
+                            <p class="text-sm">Description of the video goes here.</p>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-yellow-400 text-primary px-4 py-1 rounded-full font-bold">
+                            #1</div>
                 </div>
                 <!-- Clone Video Card 6 more times -->
                 <div class="relative group mb-8 transition-transform duration-300 hover:scale-105">
-                    <video src="/images/video-thumbnail.jpg" alt="Video Thumbnail" class="w-full h-64 object-cover rounded-lg shadow-lg">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-lg"></div>
-                    <div class="absolute bottom-4 left-4 text-white">
-                        <h2 class="text-2xl font-bold">Video Title</h2>
-                        <p class="text-sm">Description of the video goes here.</p>
-                    </div>
-                    <div class="absolute top-4 right-4 bg-yellow-400 text-primary px-4 py-1 rounded-full font-bold">#2</div>
+                    <video src="/images/video-thumbnail.jpg" alt="Video Thumbnail"
+                        class="w-full h-64 object-cover rounded-lg shadow-lg">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-lg"></div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h2 class="text-2xl font-bold">Video Title</h2>
+                            <p class="text-sm">Description of the video goes here.</p>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-yellow-400 text-primary px-4 py-1 rounded-full font-bold">
+                            #2</div>
                 </div>
                 <div class="relative group mb-8 transition-transform duration-300 hover:scale-105">
-                    <video src="/images/video-thumbnail.jpg" alt="Video Thumbnail" class="w-full h-64 object-cover rounded-lg shadow-lg">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-lg"></div>
-                    <div class="absolute bottom-4 left-4 text-white">
-                        <h2 class="text-2xl font-bold">Video Title</h2>
-                        <p class="text-sm">Description of the video goes here.</p>
-                    </div>
-                    <div class="absolute top-4 right-4 bg-yellow-400 text-primary px-4 py-1 rounded-full font-bold">#3</div>
+                    <video src="/images/video-thumbnail.jpg" alt="Video Thumbnail"
+                        class="w-full h-64 object-cover rounded-lg shadow-lg">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-lg"></div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h2 class="text-2xl font-bold">Video Title</h2>
+                            <p class="text-sm">Description of the video goes here.</p>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-yellow-400 text-primary px-4 py-1 rounded-full font-bold">
+                            #3</div>
                 </div>
                 <div class="relative group mb-8 transition-transform duration-300 hover:scale-105">
-                    <video src="/images/video-thumbnail.jpg" alt="Video Thumbnail" class="w-full h-64 object-cover rounded-lg shadow-lg">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-lg"></div>
-                    <div class="absolute bottom-4 left-4 text-white">
-                        <h2 class="text-2xl font-bold">Video Title</h2>
-                        <p class="text-sm">Description of the video goes here.</p>
-                    </div>
-                    <div class="absolute top-4 right-4 bg-yellow-400 text-primary px-4 py-1 rounded-full font-bold">#4</div>
+                    <video src="/images/video-thumbnail.jpg" alt="Video Thumbnail"
+                        class="w-full h-64 object-cover rounded-lg shadow-lg">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-lg"></div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h2 class="text-2xl font-bold">Video Title</h2>
+                            <p class="text-sm">Description of the video goes here.</p>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-yellow-400 text-primary px-4 py-1 rounded-full font-bold">
+                            #4</div>
                 </div>
                 <div class="relative group mb-8 transition-transform duration-300 hover:scale-105">
-                    <video src="/images/video-thumbnail.jpg" alt="Video Thumbnail" class="w-full h-64 object-cover rounded-lg shadow-lg">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-lg"></div>
-                    <div class="absolute bottom-4 left-4 text-white">
-                        <h2 class="text-2xl font-bold">Video Title</h2>
-                        <p class="text-sm">Description of the video goes here.</p>
-                    </div>
-                    <div class="absolute top-4 right-4 bg-yellow-400 text-primary px-4 py-1 rounded-full font-bold">#5</div>
+                    <video src="/images/video-thumbnail.jpg" alt="Video Thumbnail"
+                        class="w-full h-64 object-cover rounded-lg shadow-lg">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-lg"></div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h2 class="text-2xl font-bold">Video Title</h2>
+                            <p class="text-sm">Description of the video goes here.</p>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-yellow-400 text-primary px-4 py-1 rounded-full font-bold">
+                            #5</div>
                 </div>
                 <div class="relative group mb-8 transition-transform duration-300 hover:scale-105">
-                    <video src="/images/video-thumbnail.jpg" alt="Video Thumbnail" class="w-full h-64 object-cover rounded-lg shadow-lg">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-lg"></div>
-                    <div class="absolute bottom-4 left-4 text-white">
-                        <h2 class="text-2xl font-bold">Video Title</h2>
-                        <p class="text-sm">Description of the video goes here.</p>
-                    </div>
-                    <div class="absolute top-4 right-4 bg-yellow-400 text-primary px-4 py-1 rounded-full font-bold">#6</div>
+                    <video src="/images/video-thumbnail.jpg" alt="Video Thumbnail"
+                        class="w-full h-64 object-cover rounded-lg shadow-lg">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-lg"></div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h2 class="text-2xl font-bold">Video Title</h2>
+                            <p class="text-sm">Description of the video goes here.</p>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-yellow-400 text-primary px-4 py-1 rounded-full font-bold">
+                            #6</div>
                 </div>
                 <div class="relative group mb-8 transition-transform duration-300 hover:scale-105">
-                    <video src="/images/video-thumbnail.jpg" alt="Video Thumbnail" class="w-full h-64 object-cover rounded-lg shadow-lg">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-lg"></div>
-                    <div class="absolute bottom-4 left-4 text-white">
-                        <h2 class="text-2xl font-bold">Video Title</h2>
-                        <p class="text-sm">Description of the video goes here.</p>
-                    </div>
-                    <div class="absolute top-4 right-4 bg-yellow-400 text-primary px-4 py-1 rounded-full font-bold">#7</div>
+                    <video src="/images/video-thumbnail.jpg" alt="Video Thumbnail"
+                        class="w-full h-64 object-cover rounded-lg shadow-lg">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-lg"></div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h2 class="text-2xl font-bold">Video Title</h2>
+                            <p class="text-sm">Description of the video goes here.</p>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-yellow-400 text-primary px-4 py-1 rounded-full font-bold">
+                            #7</div>
                 </div>
             </div>
         </div>
 
-    <script>
-        $(document).ready(function () {
-            $("#sidebar-container").load("components/sidebar.html", function () {
-                $("#openSidebar").click(function () {
-                    $("#sidebar").removeClass("-translate-x-full");
-                    $(this).addClass("opacity-0");
+        <script>
+            $(document).ready(function () {
+                $("#sidebar-container").load("components/sidebar.html", function () {
+                    $("#openSidebar").click(function () {
+                        $("#sidebar").removeClass("-translate-x-full");
+                        $(this).addClass("opacity-0");
+                    });
+
+                    $("#closeSidebar").click(function () {
+                        $("#sidebar").addClass("-translate-x-full");
+                        $("#openSidebar").removeClass("opacity-0");
+                    });
                 });
 
-                $("#closeSidebar").click(function () {
-                    $("#sidebar").addClass("-translate-x-full");
-                    $("#openSidebar").removeClass("opacity-0");
+                $("#footer-container").load("components/footer.html", function () {
+                    const yearElement = document.querySelector('#copyright-year');
+                    yearElement.textContent = new Date().getFullYear();
+                });
+                const swiper = new Swiper('.swiper-container', {
+                    effect: 'coverflow',
+                    grabCursor: true,
+                    centeredSlides: true,
+                    slidesPerView: 'auto',
+                    coverflowEffect: {
+                        rotate: 50,
+                        stretch: 0,
+                        depth: 100,
+                        modifier: 1,
+                        slideShadows: true,
+                    },
+                    pagination: {
+                        el: '.swiper-pagination',
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+
+                    on: {
+                        slideChange: function () {
+                            // Pause all videos
+                            document.querySelectorAll('.swiper-slide video').forEach((video) => {
+                                video.pause();
+                            });
+
+                            // Play the video in the active slide
+                            const activeSlide = swiper.slides[swiper.activeIndex];
+                            const video = activeSlide.querySelector('video');
+                            if (video) {
+                                video.currentTime = 0; // Reset video to the start
+                                video.play();
+                            }
+                        },
+                    },
+                });
+
+                // Initially play the video in the first slide
+                const firstSlideVideo = document.querySelector('.swiper-slide video');
+                if (firstSlideVideo) {
+                    firstSlideVideo.play();
+                }
+            });
+
+            document.addEventListener('DOMContentLoaded', () => {
+                const videos = document.querySelectorAll('.swiper-slide video');
+
+                videos.forEach(video => {
+                    video.addEventListener('mouseover', () => {
+                        video.play();
+                    });
+
+                    video.addEventListener('mouseout', () => {
+                        video.pause();
+                        video.currentTime = 0;
+                    });
                 });
             });
+        </script>
 
-            $("#footer-container").load("components/footer.html", function () {
-                const yearElement = document.querySelector('#copyright-year');
-                yearElement.textContent = new Date().getFullYear();
-            });
-            const swiper = new Swiper('.swiper-container', {
-                effect: 'coverflow',
-                grabCursor: true,
-                centeredSlides: true,
-                slidesPerView: 'auto',
-                coverflowEffect: {
-                    rotate: 50,
-                    stretch: 0,
-                    depth: 100,
-                    modifier: 1,
-                    slideShadows: true,
-                },
-                pagination: {
-                    el: '.swiper-pagination',
-                },
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                
-    on: {
-        slideChange: function () {
-            // Pause all videos
-            document.querySelectorAll('.swiper-slide video').forEach((video) => {
-                video.pause();
+        <script>
+            // Disable right-click
+            document.addEventListener('contextmenu', (e) => e.preventDefault());
+
+            // Disable keyboard shortcuts
+            document.addEventListener('keydown', (e) => {
+                if (
+                    // Disable F12
+                    e.key === 'F12' ||
+                    // Disable Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+Shift+C
+                    (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) ||
+                    // Disable Ctrl+U (view source)
+                    (e.ctrlKey && e.key === 'U')
+                ) {
+                    e.preventDefault();
+                }
             });
 
-            // Play the video in the active slide
-            const activeSlide = swiper.slides[swiper.activeIndex];
-            const video = activeSlide.querySelector('video');
-            if (video) {
-                video.currentTime = 0; // Reset video to the start
-                video.play();
+            // Clear console on open
+            console.clear();
+            // Override console methods
+            ['log', 'debug', 'info', 'warn', 'error'].forEach(method => {
+                console[method] = () => { };
+            });
+
+            // Detect DevTools
+            let devtools = function () { };
+            devtools.toString = function () {
+                document.querySelector('.gallery-content').style.display = 'none';
+                return '';
             }
-        },
-    },
-});
-
-// Initially play the video in the first slide
-const firstSlideVideo = document.querySelector('.swiper-slide video');
-if (firstSlideVideo) {
-    firstSlideVideo.play();
-}
-            });
-    </script>
-
-    <script>
-        // Disable right-click
-        document.addEventListener('contextmenu', (e) => e.preventDefault());
-
-        // Disable keyboard shortcuts
-        document.addEventListener('keydown', (e) => {
-            if (
-                // Disable F12
-                e.key === 'F12' ||
-                // Disable Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+Shift+C
-                (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) ||
-                // Disable Ctrl+U (view source)
-                (e.ctrlKey && e.key === 'U')
-            ) {
-                e.preventDefault();
-            }
-        });
-
-        // Clear console on open
-        console.clear();
-        // Override console methods
-        ['log', 'debug', 'info', 'warn', 'error'].forEach(method => {
-            console[method] = () => { };
-        });
-
-        // Detect DevTools
-        let devtools = function () { };
-        devtools.toString = function () {
-            document.querySelector('.gallery-content').style.display = 'none';
-            return '';
-        }
-        console.log('%c', devtools);
-    </script>
-</body>
+            console.log('%c', devtools);
+        </script>
+    </body>
 
 </html>

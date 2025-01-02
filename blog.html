@@ -34,11 +34,9 @@
 <div class="flex justify-between items-center">
     <!-- Sidebar container for dynamic loading -->
     <div id="sidebar-container"></div>
-    
+
     <!-- Logo with responsive sizing -->
-    <img src="/images/adiklaas.png" 
-         alt="Adiklaas Logo" 
-         class="w-24 sm:w-32 h-auto fixed top-4 sm:top-6 right-4 sm:right-6 z-10 
+    <img src="/images/adiklaas.png" alt="Adiklaas Logo" class="w-24 sm:w-32 h-auto fixed top-4 sm:top-6 right-4 sm:right-6 z-10 
                 transition-transform duration-300 hover:scale-110">
 </div>
 
@@ -47,7 +45,7 @@
 <body class="bg-white font-inter tracking-tighter text-primary">
 
     <!-- Comic-Style News Section -->
-    <div class="bg-gradient-to-b from-accent/30 to-white py-20 relative overflow-hidden">
+    <div class="bg-gradient-to-b from-accent/30 to-white py-10 sm:py-20 relative overflow-hidden">
         <!-- Comic dot pattern background -->
         <div
             class="absolute inset-0 bg-[radial-gradient(#2D3142_1px,transparent_1px)] [background-size:16px_16px] opacity-5">
@@ -55,28 +53,29 @@
 
         <!-- Comic burst header -->
         <div class="container mx-auto px-4 relative">
-            <div class="text-center mb-12">
+            <div class="text-center mb-8 sm:mb-12">
                 <!-- Comic-style newspaper name -->
                 <div class="relative inline-block">
                     <div class="absolute inset-0 bg-yellow-400 transform rotate-2 rounded-xl"></div>
-                    <h1 class="relative text-8xl font-mystery bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary
-                          [text-shadow:4px_4px_0_#B57D7D] transform hover:scale-105 transition-transform duration-500">
+                    <h1
+                        class="relative text-4xl sm:text-6xl md:text-8xl font-mystery bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary
+                          [text-shadow:2px_2px_0_#B57D7D] sm:[text-shadow:4px_4px_0_#B57D7D] transform hover:scale-105 transition-transform duration-500">
                         THE ADIKLAAS CHRONICLE
                     </h1>
                 </div>
 
                 <!-- Newspaper tagline -->
-                <div class="mt-8 flex justify-center items-center space-x-4">
-                    <div class="comic-burst text-xl font-bold">VOLUME 1</div>
-                    <div class="text-3xl font-mystery text-secondary">|</div>
-                    <div class="comic-burst text-xl font-bold">ISSUE #42</div>
+                <div class="mt-4 sm:mt-8 flex justify-center items-center space-x-2 sm:space-x-4">
+                    <div class="comic-burst text-base sm:text-xl font-bold">VOLUME 1</div>
+                    <div class="text-xl sm:text-3xl font-mystery text-secondary">|</div>
+                    <div class="comic-burst text-base sm:text-xl font-bold">ISSUE #42</div>
                 </div>
 
                 <!-- Dynamic date banner -->
-                <div class="relative mt-6">
+                <div class="relative mt-4 sm:mt-6">
                     <div class="absolute inset-0 bg-primary transform -rotate-1 rounded-lg"></div>
-                    <div id="date-toast" class="relative bg-white px-8 py-3 rounded-lg border-4 border-primary
-                                         font-mystery text-2xl text-secondary inline-block
+                    <div id="date-toast" class="relative bg-white px-4 sm:px-8 py-2 sm:py-3 rounded-lg border-2 sm:border-4 border-primary
+                                         font-mystery text-lg sm:text-2xl text-secondary inline-block
                                          transform hover:rotate-2 transition-transform duration-300">
                         ⚡ LATEST EDITION - JANUARY 2024 ⚡
                     </div>
@@ -88,10 +87,10 @@
     <!-- Comic News Grid -->
     <div class="container mx-auto px-8 py-16">
         <!-- Breaking News Banner -->
-        <div class="relative mb-12">
+        <div class="relative mb-8 sm:mb-12">
             <div class="absolute inset-0 bg-red-500 transform rotate-1"></div>
-            <div class="relative bg-white p-4 border-4 border-primary text-center">
-                <span class="font-mystery text-3xl text-red-500">BREAKING NEWS!</span>
+            <div class="relative bg-white p-3 sm:p-4 border-2 sm:border-4 border-primary text-center">
+                <span class="font-mystery text-2xl sm:text-3xl md:text-4xl text-red-500">BREAKING NEWS!</span>
             </div>
         </div>
 
@@ -99,37 +98,37 @@
             <!-- Featured Story Template -->
             <div class="col-span-1 md:col-span-2 lg:col-span-3">
                 <article class="group relative bg-white rounded-2xl overflow-hidden
-                          border-4 border-primary shadow-[12px_12px_0_0_#2D3142]
-                          transform hover:-rotate-1 transition-all duration-300">
+                              border-2 sm:border-4 border-primary shadow-[6px_6px_0_0_#2D3142] sm:shadow-[12px_12px_0_0_#2D3142]
+                              transform hover:-rotate-1 transition-all duration-300">
                     <!-- Comic style label -->
-                    <div class="comic-label">EXCLUSIVE!</div>
+                    <div class="comic-label text-sm sm:text-base">EXCLUSIVE!</div>
 
                     <!-- Featured image with overlay -->
                     <div class="relative">
                         <img src="/images/group-pic.png" alt="Featured Story"
-                            class="w-full h-96 object-cover transition-transform duration-500 group-hover:scale-105">
+                            class="w-full h-48 sm:h-72 md:h-96 object-cover transition-transform duration-500 group-hover:scale-105">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                     </div>
 
                     <!-- Content -->
-                    <div class="p-8 relative">
+                    <div class="p-4 sm:p-6 md:p-8 relative">
                         <!-- Category tag -->
-                        <div class="comic-tag">TOP STORY</div>
+                        <div class="comic-tag text-sm sm:text-base">TOP STORY</div>
 
                         <!-- Headline -->
-                        <h2 class="text-5xl font-bold mb-4 text-primary font-mystery">
+                        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 text-primary font-mystery">
                             TECH TITANS EMERGE!
-                            <span class="block text-secondary mt-2">New Generation of Coders Rises!</span>
+                            <span class="block text-secondary mt-1 sm:mt-2">New Generation of Coders Rises!</span>
                         </h2>
 
                         <!-- Story preview -->
-                        <p class="text-primary/70 text-xl mb-6 font-bold">
+                        <p class="text-primary/70 text-lg sm:text-xl mb-4 sm:mb-6 font-bold">
                             Witness the extraordinary journey of Adiklaas warriors as they conquer the digital realm!
                             <span class="text-secondary">Full coverage inside!</span>
                         </p>
 
                         <!-- Action button -->
-                        <a href="#" class="comic-button">
+                        <a href="#" class="comic-button text-sm sm:text-base">
                             REVEAL THE TRUTH! →
                         </a>
                     </div>
